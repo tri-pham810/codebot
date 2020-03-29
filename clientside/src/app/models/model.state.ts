@@ -19,16 +19,16 @@ import {Params, RouterStateSnapshot} from '@angular/router';
 import {RouterReducerState, RouterStateSerializer} from '@ngrx/router-store';
 import {RoutingEffect} from '../lib/routing/routing.effect';
 import {QueryParams} from '../lib/services/http/interfaces';
-import {FishEffect} from './fish/fish.model.effect';
-import {
-	FishModelState,
-	initialState as FishModelInitialState
-} from './fish/fish.model.state';
 import {TankEffect} from './tank/tank.model.effect';
 import {
 	TankModelState,
 	initialState as TankModelInitialState
 } from './tank/tank.model.state';
+import {FishEffect} from './fish/fish.model.effect';
+import {
+	FishModelState,
+	initialState as FishModelInitialState
+} from './fish/fish.model.state';
 import {SpeciesEffect} from './species/species.model.effect';
 import {
 	SpeciesModelState,
@@ -108,8 +108,8 @@ export interface AbstractModelAudit<E extends AbstractModel> {
  * application.
  */
 export interface ModelState {
-	FishModel: FishModelState;
 	TankModel: TankModelState;
+	FishModel: FishModelState;
 	SpeciesModel: SpeciesModelState;
 	AdminModel: AdminModelState;
 	FishnaticModel: FishnaticModelState;
@@ -121,15 +121,15 @@ export interface ModelState {
  * Initial model state of the application.
  */
 export const initialModelState: ModelState = {
-	FishModel: {
-		...FishModelInitialState,
-		// % protected region % [Add any additional state for model Fish here] off begin
-		// % protected region % [Add any additional state for model Fish here] end
-	},
 	TankModel: {
 		...TankModelInitialState,
 		// % protected region % [Add any additional state for model Tank here] off begin
 		// % protected region % [Add any additional state for model Tank here] end
+	},
+	FishModel: {
+		...FishModelInitialState,
+		// % protected region % [Add any additional state for model Fish here] off begin
+		// % protected region % [Add any additional state for model Fish here] end
 	},
 	SpeciesModel: {
 		...SpeciesModelInitialState,
@@ -174,8 +174,8 @@ export interface AppState {
  */
 export const effects = [
 	RoutingEffect,
-	FishEffect,
 	TankEffect,
+	FishEffect,
 	SpeciesEffect,
 	AdminEffect,
 	FishnaticEffect,

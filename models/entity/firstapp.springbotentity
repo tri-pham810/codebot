@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <springbotEntity:EntityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:springbotEntity="http://codebots.com/emf/springbot/entity" Uuid="6991d1a4-71db-11ea-87c7-6d6f75736579" TargetProject="firstapp">
-  <Entities xsi:type="springbotEntity:Entity" Uuid="356ebb0d-1e65-4d3b-849a-d8bddd605974" Name="Fish" DocoDescription="Fish">
-    <Attributes xsi:type="springbotEntity:AttributeString" Uuid="765529f5-8de2-4676-b44b-fedbb6c24682" Name="Name" DocoDescription="Name">
-      <Validators xsi:type="springbotEntity:ValidatorRequired" Uuid="af5c2ba3-3145-425a-b467-37f600bb3071"/>
-    </Attributes>
-    <Attributes xsi:type="springbotEntity:AttributeBoolean" Uuid="85a842bb-f081-47be-b44a-a362d21ed0e5" Name="Alive" DocoDescription="Alive"/>
-    <Attributes xsi:type="springbotEntity:AttributeDate" Uuid="829fcb76-8bfc-41dc-a858-3384619b0fde" Name="Date of Birth" DocoDescription="Date"/>
-  </Entities>
-  <Entities xsi:type="springbotEntity:Entity" Uuid="dfb49f05-0e0a-427e-86c8-c67bc655c6c6" Name="Tank">
+  <Entities xsi:type="springbotEntity:Entity" Uuid="dfb49f05-0e0a-427e-86c8-c67bc655c6c6" Name="Tank" DocoDescription="Tank">
     <Attributes xsi:type="springbotEntity:AttributeString" Uuid="9560c44b-265d-4571-888d-09949fa0b45a" Name="Name" DocoDescription="Name">
       <Validators xsi:type="springbotEntity:ValidatorRequired" Uuid="bf609a4d-154a-460c-9709-855dcfdb3d19"/>
     </Attributes>
@@ -15,7 +8,14 @@
     <Attributes xsi:type="springbotEntity:AttributeDecimal" Uuid="cdb34267-e5ad-4c52-9f86-9f17a69c6abd" Name="Length" DocoDescription="Length"/>
     <Attributes xsi:type="springbotEntity:AttributeDecimal" Uuid="830e49e8-9cb8-45a9-8554-c0431573fa6c" Name="Width" DocoDescription="Width"/>
   </Entities>
-  <Entities xsi:type="springbotEntity:Entity" Uuid="698fd4c0-c323-4f4e-b225-0129d5d840dc" Name="Species">
+  <Entities xsi:type="springbotEntity:Entity" Uuid="356ebb0d-1e65-4d3b-849a-d8bddd605974" Name="Fish" DocoDescription="Fish">
+    <Attributes xsi:type="springbotEntity:AttributeString" Uuid="765529f5-8de2-4676-b44b-fedbb6c24682" Name="Name" DocoDescription="Name">
+      <Validators xsi:type="springbotEntity:ValidatorRequired" Uuid="af5c2ba3-3145-425a-b467-37f600bb3071"/>
+    </Attributes>
+    <Attributes xsi:type="springbotEntity:AttributeBoolean" Uuid="85a842bb-f081-47be-b44a-a362d21ed0e5" Name="Alive" DocoDescription="Alive"/>
+    <Attributes xsi:type="springbotEntity:AttributeDate" Uuid="829fcb76-8bfc-41dc-a858-3384619b0fde" Name="Date of Birth" DocoDescription="Date"/>
+  </Entities>
+  <Entities xsi:type="springbotEntity:Entity" Uuid="698fd4c0-c323-4f4e-b225-0129d5d840dc" Name="Species" DocoDescription="Species">
     <Attributes xsi:type="springbotEntity:AttributeString" Uuid="459a2eac-c738-46df-b25c-3e095ac98eff" Name="Name" DocoDescription="Fish" Searchable="true">
       <Validators xsi:type="springbotEntity:ValidatorRequired" Uuid="868f9889-c068-4757-95a5-6352b8dcb6f8"/>
     </Attributes>

@@ -52,16 +52,6 @@ public final class AnonymousHelper {
 	private static Authentication setupAnonymousUser() {
 		List<CustomGrantedAuthority> authorities = new ArrayList<>();
 
-		CustomGrantedAuthority fishAuthority = new CustomGrantedAuthority(
-				"ROLE_FISH",
-				"FishEntity",
-				true,
-				true,
-				true,
-				true
-		);
-		authorities.add(fishAuthority);
-
 		CustomGrantedAuthority tankAuthority = new CustomGrantedAuthority(
 				"ROLE_TANK",
 				"TankEntity",
@@ -71,6 +61,16 @@ public final class AnonymousHelper {
 				true
 		);
 		authorities.add(tankAuthority);
+
+		CustomGrantedAuthority fishAuthority = new CustomGrantedAuthority(
+				"ROLE_FISH",
+				"FishEntity",
+				true,
+				true,
+				true,
+				true
+		);
+		authorities.add(fishAuthority);
 
 		CustomGrantedAuthority speciesAuthority = new CustomGrantedAuthority(
 				"ROLE_SPECIES",

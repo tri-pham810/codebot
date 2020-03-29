@@ -42,7 +42,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 @Audited
-@ApiModel(description = "")
+@ApiModel(description = "Tank")
 @ExcludeSuperclassListeners
 @EntityListeners({TankEntityListener.class, AuditingEntityListener.class})
 @JsonSerialize(using = TankSerializer.class)

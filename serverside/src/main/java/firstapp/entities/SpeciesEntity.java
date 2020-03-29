@@ -42,7 +42,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 @Audited
-@ApiModel(description = "")
+@ApiModel(description = "Species")
 @ExcludeSuperclassListeners
 @EntityListeners({SpeciesEntityListener.class, AuditingEntityListener.class})
 @JsonSerialize(using = SpeciesSerializer.class)
