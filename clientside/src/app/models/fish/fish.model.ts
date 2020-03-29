@@ -68,14 +68,14 @@ export class FishModel extends AbstractModel {
 	name: string;
 
 	/**
-	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=3, example=2018-10-22}.
-	 */
-	dateOfBirth: Date;
-
-	/**
-	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=4, example=true}.
+	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=3, example=true}.
 	 */
 	alive: boolean = false;
+
+	/**
+	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=4, example=2018-10-22}.
+	 */
+	dateOfBirth: Date;
 
 	tankId: string;
 
@@ -123,28 +123,6 @@ export class FishModel extends AbstractModel {
 				// % protected region % [Add any additional model attribute properties for Name here] end
 			},
 			{
-				name: 'dateOfBirth',
-				// % protected region % [Set displayName for Date of Birth here] off begin
-				displayName: 'Date of Birth',
-				// % protected region % [Set displayName for Date of Birth here] end
-				type: ModelPropertyType.DATE,
-				// % protected region % [Set display element type for Date of Birth here] off begin
-				elementType: ElementType.DATE,
-				// % protected region % [Set display element type for Date of Birth here] end
-				// % protected region % [Set isSensitive for Date of Birth here] off begin
-				isSensitive: false,
-				// % protected region % [Set isSensitive for Date of Birth here] end
-				// % protected region % [Set readonly for Date of Birth here] off begin
-				readOnly: false,
-				// % protected region % [Set readonly for Date of Birth here] end
-				validators: [
-					// % protected region % [Add other validators for Date of Birth here] off begin
-					// % protected region % [Add other validators for Date of Birth here] end
-				],
-				// % protected region % [Add any additional model attribute properties for Date of Birth here] off begin
-				// % protected region % [Add any additional model attribute properties for Date of Birth here] end
-			},
-			{
 				name: 'alive',
 				// % protected region % [Set displayName for Alive here] off begin
 				displayName: 'Alive',
@@ -165,6 +143,28 @@ export class FishModel extends AbstractModel {
 				],
 				// % protected region % [Add any additional model attribute properties for Alive here] off begin
 				// % protected region % [Add any additional model attribute properties for Alive here] end
+			},
+			{
+				name: 'dateOfBirth',
+				// % protected region % [Set displayName for Date of Birth here] off begin
+				displayName: 'Date of Birth',
+				// % protected region % [Set displayName for Date of Birth here] end
+				type: ModelPropertyType.DATE,
+				// % protected region % [Set display element type for Date of Birth here] off begin
+				elementType: ElementType.DATE,
+				// % protected region % [Set display element type for Date of Birth here] end
+				// % protected region % [Set isSensitive for Date of Birth here] off begin
+				isSensitive: false,
+				// % protected region % [Set isSensitive for Date of Birth here] end
+				// % protected region % [Set readonly for Date of Birth here] off begin
+				readOnly: false,
+				// % protected region % [Set readonly for Date of Birth here] end
+				validators: [
+					// % protected region % [Add other validators for Date of Birth here] off begin
+					// % protected region % [Add other validators for Date of Birth here] end
+				],
+				// % protected region % [Add any additional model attribute properties for Date of Birth here] off begin
+				// % protected region % [Add any additional model attribute properties for Date of Birth here] end
 			},
 			// % protected region % [Add any additional class field names here] off begin
 			// % protected region % [Add any additional class field names here] end
@@ -288,6 +288,7 @@ export class FishModel extends AbstractModel {
 		if (data) {
 			const json = typeof data === 'string' ? JSON.parse(data) as { [K in keyof FishModel]?: FishModel[K] } : data;
 			this.name = json.name;
+			this.alive = json.alive;
 			if (json.dateOfBirth) {
 				this.dateOfBirth = new Date(json.dateOfBirth);
 			} else {
@@ -295,7 +296,6 @@ export class FishModel extends AbstractModel {
 				// with the original empty value (null) or lack thereof (undefined).
 				this.dateOfBirth = json.dateOfBirth;
 			}
-			this.alive = json.alive;
 			this.tankId = json.tankId;
 			this.speciesId = json.speciesId;
 			// % protected region % [Add any additional logic here after set the data] off begin
@@ -310,8 +310,8 @@ export class FishModel extends AbstractModel {
 		return {
 			...super.toJSON(),
 			name: this.name,
-			dateOfBirth: this.dateOfBirth,
 			alive: this.alive,
+			dateOfBirth: this.dateOfBirth,
 			tankId: this.tankId,
 			speciesId: this.speciesId,
 			// % protected region % [Add any additional logic here to json] off begin

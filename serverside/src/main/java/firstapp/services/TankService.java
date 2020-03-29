@@ -150,21 +150,21 @@ public class TankService extends AbstractService<TankEntity, TankRepository, Tan
 	}
 
 	/**
-	 * Return an entity or a list of entities that have the given attribute Width.
+	 * Return an entity or a list of entities that have the given attribute Height.
 	 *
-	 * @param width the attribute against which the entities will be retrieved
-	 * @return a list of entities that have the given attribute Width
+	 * @param height the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Height
 	 */
 	@PreAuthorize("hasPermission('TankEntity', 'read')")
 	@Transactional(readOnly = true)
-	public List<TankEntity> findByWidth(Double width) {
-		// % protected region % [Add any additional logic for findByWidth before the main body here] off begin
-		// % protected region % [Add any additional logic for findByWidth before the main body here] end
+	public List<TankEntity> findByHeight(Double height) {
+		// % protected region % [Add any additional logic for findByHeight before the main body here] off begin
+		// % protected region % [Add any additional logic for findByHeight before the main body here] end
 
-		List<TankEntity> entities = Lists.newArrayList(repository.findByWidth(width));
+		List<TankEntity> entities = Lists.newArrayList(repository.findByHeight(height));
 
-		// % protected region % [Add any additional logic for findByWidth before returning the entities here] off begin
-		// % protected region % [Add any additional logic for findByWidth before returning the entities here] end
+		// % protected region % [Add any additional logic for findByHeight before returning the entities here] off begin
+		// % protected region % [Add any additional logic for findByHeight before returning the entities here] end
 
 		return entities;
 	}
@@ -190,21 +190,21 @@ public class TankService extends AbstractService<TankEntity, TankRepository, Tan
 	}
 
 	/**
-	 * Return an entity or a list of entities that have the given attribute Height.
+	 * Return an entity or a list of entities that have the given attribute Width.
 	 *
-	 * @param height the attribute against which the entities will be retrieved
-	 * @return a list of entities that have the given attribute Height
+	 * @param width the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Width
 	 */
 	@PreAuthorize("hasPermission('TankEntity', 'read')")
 	@Transactional(readOnly = true)
-	public List<TankEntity> findByHeight(Double height) {
-		// % protected region % [Add any additional logic for findByHeight before the main body here] off begin
-		// % protected region % [Add any additional logic for findByHeight before the main body here] end
+	public List<TankEntity> findByWidth(Double width) {
+		// % protected region % [Add any additional logic for findByWidth before the main body here] off begin
+		// % protected region % [Add any additional logic for findByWidth before the main body here] end
 
-		List<TankEntity> entities = Lists.newArrayList(repository.findByHeight(height));
+		List<TankEntity> entities = Lists.newArrayList(repository.findByWidth(width));
 
-		// % protected region % [Add any additional logic for findByHeight before returning the entities here] off begin
-		// % protected region % [Add any additional logic for findByHeight before returning the entities here] end
+		// % protected region % [Add any additional logic for findByWidth before returning the entities here] off begin
+		// % protected region % [Add any additional logic for findByWidth before returning the entities here] end
 
 		return entities;
 	}

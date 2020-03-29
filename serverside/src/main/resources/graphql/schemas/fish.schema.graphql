@@ -20,8 +20,8 @@ type Fish {
 	created: String
 	modified: String
 	name: String
-	dateOfBirth: String
 	alive: Boolean
+	dateOfBirth: String
 	tank: Tank
 	species: Species
 	# % protected region % [Add any additional field definition here] off begin
@@ -42,8 +42,8 @@ input FishInput {
 	created: String
 	modified: String
 	name: String
-	dateOfBirth: String
 	alive: Boolean
+	dateOfBirth: String
 	tank: TankInput
 	tankId: ID
 	species: SpeciesInput

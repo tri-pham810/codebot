@@ -41,20 +41,20 @@ public interface FishRepository extends AbstractRepository<FishEntity> {
 	List<FishEntity> findByName(@NotNull String name);
 
 	/**
-	 * Return an entity or a list of entities that have the given attribute Date of Birth.
-	 *
-	 * @param dateOfBirth the attribute against which the entities will be retrieved
-	 * @return a list of entities that have the given attribute Date of Birth
-	 */
-	List<FishEntity> findByDateOfBirth(@NotNull OffsetDateTime dateOfBirth);
-
-	/**
 	 * Return an entity or a list of entities that have the given attribute Alive.
 	 *
 	 * @param alive the attribute against which the entities will be retrieved
 	 * @return a list of entities that have the given attribute Alive
 	 */
 	List<FishEntity> findByAlive(@NotNull Boolean alive);
+
+	/**
+	 * Return an entity or a list of entities that have the given attribute Date of Birth.
+	 *
+	 * @param dateOfBirth the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Date of Birth
+	 */
+	List<FishEntity> findByDateOfBirth(@NotNull OffsetDateTime dateOfBirth);
 
 	// % protected region % [Add any additional class methods here] off begin
 	// % protected region % [Add any additional class methods here] end

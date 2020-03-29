@@ -52,11 +52,11 @@ public class AdminEntitiesFishPage extends CrudPage {
 
 	@FindBy(how = How.XPATH, using = "//input[@id='name-field']")
 	private WebElement nameField;
+	@FindBy(how = How.XPATH, using = "//input[@id='alive-field']")
+	private WebElement aliveField;
 	// TODO default handling dataAttribute dateOfBirthField;
 	@FindBy(how = How.XPATH, using = "//input[@id='dateOfBirth-field']")
 	private WebElement dateOfBirthField;
-	@FindBy(how = How.XPATH, using = "//input[@id='alive-field']")
-	private WebElement aliveField;
 
 	// Outgoing one-to-one
 
@@ -105,12 +105,12 @@ public class AdminEntitiesFishPage extends CrudPage {
 	{
 		var entity = (FishEntity) abstractEntity;
 		nameField.sendKeys(entity.getName());
-		// TODO default handling for dataAttribute dateOfBirthField
-		dateOfBirthField.sendKeys(entity.getDateOfBirth().toString());
-
 		if (entity.getAlive()) {
 			aliveField.click();
 		}
+		// TODO default handling for dataAttribute dateOfBirthField
+		dateOfBirthField.sendKeys(entity.getDateOfBirth().toString());
+
 
 		saveButton.click();
 	}

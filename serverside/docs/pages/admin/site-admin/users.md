@@ -23,15 +23,15 @@ Users of the system and the details related to them.
 
 | Name | Description |
 | ---- | ----
-| Fishnatic |  |
-| Admin |  |
+| Fishnatic | Behaviour |
+| Admin | Behaviour |
 
 ---
 
 
 ## Fishnatic Details
 
-
+Behaviour
 
 ### Special Attributes
 
@@ -67,7 +67,7 @@ Available actions include,
 ---
 ## Admin Details
 
-
+Behaviour
 
 ### Special Attributes
 

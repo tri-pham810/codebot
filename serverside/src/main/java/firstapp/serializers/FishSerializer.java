@@ -45,8 +45,8 @@ public class FishSerializer extends AbstractSerializer<FishEntity> {
 		super.serialize(value, gen, provider);
 
 		writeStringField(gen, "name", value.getName());
-		writeOffsetDateTimeField(gen, "dateOfBirth", value.getDateOfBirth());
 		writeBooleanField(gen, "alive", value.getAlive());
+		writeOffsetDateTimeField(gen, "dateOfBirth", value.getDateOfBirth());
 
 		// % protected region % [Modify the json before writing the object here] off begin
 		// % protected region % [Modify the json before writing the object here] end

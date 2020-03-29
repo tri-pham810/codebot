@@ -45,9 +45,9 @@ public class TankSerializer extends AbstractSerializer<TankEntity> {
 		super.serialize(value, gen, provider);
 
 		writeStringField(gen, "name", value.getName());
-		writeDoubleField(gen, "width", value.getWidth());
-		writeDoubleField(gen, "length", value.getLength());
 		writeDoubleField(gen, "height", value.getHeight());
+		writeDoubleField(gen, "length", value.getLength());
+		writeDoubleField(gen, "width", value.getWidth());
 
 		// % protected region % [Modify the json before writing the object here] off begin
 		// % protected region % [Modify the json before writing the object here] end

@@ -20,9 +20,9 @@ type Tank {
 	created: String
 	modified: String
 	name: String
-	width: Float
-	length: Float
 	height: Float
+	length: Float
+	width: Float
 	
 	fishTank: [Fish]
 	# % protected region % [Add any additional field definition here] off begin
@@ -43,9 +43,9 @@ input TankInput {
 	created: String
 	modified: String
 	name: String
-	width: Float
-	length: Float
 	height: Float
+	length: Float
+	width: Float
 	
 	fishTank: [FishInput]
 	fishTankIds: [ID!]

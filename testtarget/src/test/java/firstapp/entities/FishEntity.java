@@ -66,15 +66,15 @@ public class FishEntity extends AbstractEntity {
 	// % protected region % [Modify attribute annotation for Name here] end
 	private String name;
 
-	// % protected region % [Modify attribute annotation for Date of Birth here] off begin
-	@ToString.Include
-	// % protected region % [Modify attribute annotation for Date of Birth here] end
-	private OffsetDateTime dateOfBirth;
-
 	// % protected region % [Modify attribute annotation for Alive here] off begin
 	@ToString.Include
 	// % protected region % [Modify attribute annotation for Alive here] end
 	private Boolean alive;
+
+	// % protected region % [Modify attribute annotation for Date of Birth here] off begin
+	@ToString.Include
+	// % protected region % [Modify attribute annotation for Date of Birth here] end
+	private OffsetDateTime dateOfBirth;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//

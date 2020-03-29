@@ -65,13 +65,13 @@ public class TankEntity extends AbstractEntity {
 	// % protected region % [Modify attribute annotation for Name here] end
 	private String name;
 
-	// % protected region % [Modify attribute annotation for Width here] off begin
+	// % protected region % [Modify attribute annotation for Height here] off begin
 	@Nullable
-	@Column(name = "width")
-	@ApiModelProperty(notes = "The Width of this entity.")
+	@Column(name = "height")
+	@ApiModelProperty(notes = "The Height of this entity.")
 	@ToString.Include
-	// % protected region % [Modify attribute annotation for Width here] end
-	private Double width;
+	// % protected region % [Modify attribute annotation for Height here] end
+	private Double height;
 
 	// % protected region % [Modify attribute annotation for Length here] off begin
 	@Nullable
@@ -81,13 +81,13 @@ public class TankEntity extends AbstractEntity {
 	// % protected region % [Modify attribute annotation for Length here] end
 	private Double length;
 
-	// % protected region % [Modify attribute annotation for Height here] off begin
+	// % protected region % [Modify attribute annotation for Width here] off begin
 	@Nullable
-	@Column(name = "height")
-	@ApiModelProperty(notes = "The Height of this entity.")
+	@Column(name = "width")
+	@ApiModelProperty(notes = "The Width of this entity.")
 	@ToString.Include
-	// % protected region % [Modify attribute annotation for Height here] end
-	private Double height;
+	// % protected region % [Modify attribute annotation for Width here] end
+	private Double width;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//

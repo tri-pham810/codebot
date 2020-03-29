@@ -29,9 +29,9 @@ Details regarding a given Fish.
 ## Attributes
 | Name | Type | Example | Required | Rules | Description |
 | ---- | :----: | :--------: | :-----: | ----- | ----- |
-| Name | STRING | Sally | <i class="fa fa-check"> | <ul><li>Attribute must be entered.</li></ul> |  | 
+| Name | STRING | Sally | <i class="fa fa-check"> | <ul><li>Attribute must be entered.</li></ul> | Name | 
+| Alive | BOOLEAN | true | <i class="fa fa-times"> | <ul></ul> | Alive | 
 | DateOfBirth | DATE | 2018-10-22 | <i class="fa fa-times"> | <ul></ul> | Date | 
-| Alive | BOOLEAN | true | <i class="fa fa-times"> | <ul></ul> |  | 
 
 
 ## Security

@@ -107,15 +107,15 @@ public class TankModule extends AbstractModule {
 		// % protected region % [Add customisation for Name here] off begin
 		newEntity.setName(mock.strings().get());
 		// % protected region % [Add customisation for Name here] end
-		// % protected region % [Add customisation for Width here] off begin
-		newEntity.setWidth(mock.doubles().get());
-		// % protected region % [Add customisation for Width here] end
-		// % protected region % [Add customisation for Length here] off begin
-		newEntity.setLength(mock.doubles().get());
-		// % protected region % [Add customisation for Length here] end
 		// % protected region % [Add customisation for Height here] off begin
 		newEntity.setHeight(mock.doubles().get());
 		// % protected region % [Add customisation for Height here] end
+		// % protected region % [Add customisation for Length here] off begin
+		newEntity.setLength(mock.doubles().get());
+		// % protected region % [Add customisation for Length here] end
+		// % protected region % [Add customisation for Width here] off begin
+		newEntity.setWidth(mock.doubles().get());
+		// % protected region % [Add customisation for Width here] end
 
 		// % protected region % [Apply any additional logic for tankWithNoRef after the main body here] off begin
 		// % protected region % [Apply any additional logic for tankWithNoRef after the main body here] end

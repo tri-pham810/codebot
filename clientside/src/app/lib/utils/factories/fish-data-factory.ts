@@ -75,8 +75,8 @@ export class FishDataFactory extends AbstractDataFactory<FishModel> {
 		// % protected region % [Add any additional populate logic before the main body here] end
 
 		model.name = faker.random.words();
-		model.dateOfBirth = new Date();
 		model.alive = faker.random.boolean();
+		model.dateOfBirth = new Date();
 
 		// % protected region % [Add any additional populate logic after the main body here] off begin
 		// % protected region % [Add any additional populate logic after the main body here] end

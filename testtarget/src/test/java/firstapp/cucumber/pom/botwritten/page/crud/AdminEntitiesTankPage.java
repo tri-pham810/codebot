@@ -52,15 +52,15 @@ public class AdminEntitiesTankPage extends CrudPage {
 
 	@FindBy(how = How.XPATH, using = "//input[@id='name-field']")
 	private WebElement nameField;
-	// TODO default handling dataAttribute widthField;
-	@FindBy(how = How.XPATH, using = "//input[@id='width-field']")
-	private WebElement widthField;
-	// TODO default handling dataAttribute lengthField;
-	@FindBy(how = How.XPATH, using = "//input[@id='length-field']")
-	private WebElement lengthField;
 	// TODO default handling dataAttribute heightField;
 	@FindBy(how = How.XPATH, using = "//input[@id='height-field']")
 	private WebElement heightField;
+	// TODO default handling dataAttribute lengthField;
+	@FindBy(how = How.XPATH, using = "//input[@id='length-field']")
+	private WebElement lengthField;
+	// TODO default handling dataAttribute widthField;
+	@FindBy(how = How.XPATH, using = "//input[@id='width-field']")
+	private WebElement widthField;
 
 	// Outgoing one-to-one
 
@@ -107,14 +107,14 @@ public class AdminEntitiesTankPage extends CrudPage {
 	{
 		var entity = (TankEntity) abstractEntity;
 		nameField.sendKeys(entity.getName());
-		// TODO default handling for dataAttribute widthField
-		widthField.sendKeys(entity.getWidth().toString());
+		// TODO default handling for dataAttribute heightField
+		heightField.sendKeys(entity.getHeight().toString());
 
 		// TODO default handling for dataAttribute lengthField
 		lengthField.sendKeys(entity.getLength().toString());
 
-		// TODO default handling for dataAttribute heightField
-		heightField.sendKeys(entity.getHeight().toString());
+		// TODO default handling for dataAttribute widthField
+		widthField.sendKeys(entity.getWidth().toString());
 
 
 		saveButton.click();

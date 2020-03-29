@@ -40,12 +40,12 @@ public interface TankRepository extends AbstractRepository<TankEntity> {
 	List<TankEntity> findByName(@NotNull String name);
 
 	/**
-	 * Return an entity or a list of entities that have the given attribute Width.
+	 * Return an entity or a list of entities that have the given attribute Height.
 	 *
-	 * @param width the attribute against which the entities will be retrieved
-	 * @return a list of entities that have the given attribute Width
+	 * @param height the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Height
 	 */
-	List<TankEntity> findByWidth(@NotNull Double width);
+	List<TankEntity> findByHeight(@NotNull Double height);
 
 	/**
 	 * Return an entity or a list of entities that have the given attribute Length.
@@ -56,12 +56,12 @@ public interface TankRepository extends AbstractRepository<TankEntity> {
 	List<TankEntity> findByLength(@NotNull Double length);
 
 	/**
-	 * Return an entity or a list of entities that have the given attribute Height.
+	 * Return an entity or a list of entities that have the given attribute Width.
 	 *
-	 * @param height the attribute against which the entities will be retrieved
-	 * @return a list of entities that have the given attribute Height
+	 * @param width the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Width
 	 */
-	List<TankEntity> findByHeight(@NotNull Double height);
+	List<TankEntity> findByWidth(@NotNull Double width);
 
 	// % protected region % [Add any additional class methods here] off begin
 	// % protected region % [Add any additional class methods here] end

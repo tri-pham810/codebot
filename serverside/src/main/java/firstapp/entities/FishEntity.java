@@ -44,7 +44,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 @Audited
-@ApiModel(description = "")
+@ApiModel(description = "Fish")
 @ExcludeSuperclassListeners
 @EntityListeners({FishEntityListener.class, AuditingEntityListener.class})
 @JsonSerialize(using = FishSerializer.class)
@@ -67,6 +67,14 @@ public class FishEntity extends AbstractEntity {
 	// % protected region % [Modify attribute annotation for Name here] end
 	private String name;
 
+	// % protected region % [Modify attribute annotation for Alive here] off begin
+	@Nullable
+	@Column(name = "alive")
+	@ApiModelProperty(notes = "The Alive of this entity.")
+	@ToString.Include
+	// % protected region % [Modify attribute annotation for Alive here] end
+	private Boolean alive;
+
 	// % protected region % [Modify attribute annotation for Date of Birth here] off begin
 	@Nullable
 	@Column(name = "date_of_birth")
@@ -75,14 +83,6 @@ public class FishEntity extends AbstractEntity {
 	@ToString.Include
 	// % protected region % [Modify attribute annotation for Date of Birth here] end
 	private OffsetDateTime dateOfBirth;
-
-	// % protected region % [Modify attribute annotation for Alive here] off begin
-	@Nullable
-	@Column(name = "alive")
-	@ApiModelProperty(notes = "The Alive of this entity.")
-	@ToString.Include
-	// % protected region % [Modify attribute annotation for Alive here] end
-	private Boolean alive;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//

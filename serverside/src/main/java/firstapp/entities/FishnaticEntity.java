@@ -41,7 +41,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 @Audited
-@ApiModel(description = "")
+@ApiModel(description = "Behaviour")
 @ExcludeSuperclassListeners
 @EntityListeners({FishnaticEntityListener.class, AuditingEntityListener.class})
 @JsonSerialize(using = FishnaticSerializer.class)

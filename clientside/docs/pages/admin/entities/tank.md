@@ -29,10 +29,10 @@ Details regarding a given Tank.
 ## Attributes
 | Name | Type | Example | Required | Rules | Description |
 | ---- | :----: | :--------: | :-----: | ----- | ----- |
-| Name | STRING | Sally | <i class="fa fa-check"> | <ul><li>Attribute must be entered.</li></ul> |  | 
-| Width | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> |  | 
-| Length | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> |  | 
-| Height | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> |  | 
+| Name | STRING | Sally | <i class="fa fa-check"> | <ul><li>Attribute must be entered.</li></ul> | Name | 
+| Height | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> | Height | 
+| Length | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> | Length | 
+| Width | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> | Width | 
 
 
 ## Security

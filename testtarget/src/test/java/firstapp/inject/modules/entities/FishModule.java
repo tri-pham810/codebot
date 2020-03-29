@@ -107,12 +107,12 @@ public class FishModule extends AbstractModule {
 		// % protected region % [Add customisation for Name here] off begin
 		newEntity.setName(mock.strings().get());
 		// % protected region % [Add customisation for Name here] end
-		// % protected region % [Add customisation for Date of Birth here] off begin
-		newEntity.setDateOfBirth(OffsetDateTime.now());
-		// % protected region % [Add customisation for Date of Birth here] end
 		// % protected region % [Add customisation for Alive here] off begin
 		newEntity.setAlive(mock.bools().get());
 		// % protected region % [Add customisation for Alive here] end
+		// % protected region % [Add customisation for Date of Birth here] off begin
+		newEntity.setDateOfBirth(OffsetDateTime.now());
+		// % protected region % [Add customisation for Date of Birth here] end
 
 		// % protected region % [Apply any additional logic for fishWithNoRef after the main body here] off begin
 		// % protected region % [Apply any additional logic for fishWithNoRef after the main body here] end

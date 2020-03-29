@@ -75,9 +75,9 @@ export class TankDataFactory extends AbstractDataFactory<TankModel> {
 		// % protected region % [Add any additional populate logic before the main body here] end
 
 		model.name = faker.random.words();
-		model.width = faker.random.number();
-		model.length = faker.random.number();
 		model.height = faker.random.number();
+		model.length = faker.random.number();
+		model.width = faker.random.number();
 
 		// % protected region % [Add any additional populate logic after the main body here] off begin
 		// % protected region % [Add any additional populate logic after the main body here] end

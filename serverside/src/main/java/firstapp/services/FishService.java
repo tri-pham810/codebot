@@ -159,26 +159,6 @@ public class FishService extends AbstractService<FishEntity, FishRepository, Fis
 	}
 
 	/**
-	 * Return an entity or a list of entities that have the given attribute Date of Birth.
-	 *
-	 * @param dateOfBirth the attribute against which the entities will be retrieved
-	 * @return a list of entities that have the given attribute Date of Birth
-	 */
-	@PreAuthorize("hasPermission('FishEntity', 'read')")
-	@Transactional(readOnly = true)
-	public List<FishEntity> findByDateOfBirth(OffsetDateTime dateOfBirth) {
-		// % protected region % [Add any additional logic for findByDateOfBirth before the main body here] off begin
-		// % protected region % [Add any additional logic for findByDateOfBirth before the main body here] end
-
-		List<FishEntity> entities = Lists.newArrayList(repository.findByDateOfBirth(dateOfBirth));
-
-		// % protected region % [Add any additional logic for findByDateOfBirth before returning the entities here] off begin
-		// % protected region % [Add any additional logic for findByDateOfBirth before returning the entities here] end
-
-		return entities;
-	}
-
-	/**
 	 * Return an entity or a list of entities that have the given attribute Alive.
 	 *
 	 * @param alive the attribute against which the entities will be retrieved
@@ -194,6 +174,26 @@ public class FishService extends AbstractService<FishEntity, FishRepository, Fis
 
 		// % protected region % [Add any additional logic for findByAlive before returning the entities here] off begin
 		// % protected region % [Add any additional logic for findByAlive before returning the entities here] end
+
+		return entities;
+	}
+
+	/**
+	 * Return an entity or a list of entities that have the given attribute Date of Birth.
+	 *
+	 * @param dateOfBirth the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Date of Birth
+	 */
+	@PreAuthorize("hasPermission('FishEntity', 'read')")
+	@Transactional(readOnly = true)
+	public List<FishEntity> findByDateOfBirth(OffsetDateTime dateOfBirth) {
+		// % protected region % [Add any additional logic for findByDateOfBirth before the main body here] off begin
+		// % protected region % [Add any additional logic for findByDateOfBirth before the main body here] end
+
+		List<FishEntity> entities = Lists.newArrayList(repository.findByDateOfBirth(dateOfBirth));
+
+		// % protected region % [Add any additional logic for findByDateOfBirth before returning the entities here] off begin
+		// % protected region % [Add any additional logic for findByDateOfBirth before returning the entities here] end
 
 		return entities;
 	}

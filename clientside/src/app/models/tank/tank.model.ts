@@ -69,7 +69,7 @@ export class TankModel extends AbstractModel {
 	/**
 	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=3, example=1.41}.
 	 */
-	width: number;
+	height: number;
 
 	/**
 	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=4, example=1.41}.
@@ -79,7 +79,7 @@ export class TankModel extends AbstractModel {
 	/**
 	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=5, example=1.41}.
 	 */
-	height: number;
+	width: number;
 
 	fishTankIds: string[] = [];
 
@@ -125,26 +125,26 @@ export class TankModel extends AbstractModel {
 				// % protected region % [Add any additional model attribute properties for Name here] end
 			},
 			{
-				name: 'width',
-				// % protected region % [Set displayName for Width here] off begin
-				displayName: 'Width',
-				// % protected region % [Set displayName for Width here] end
+				name: 'height',
+				// % protected region % [Set displayName for Height here] off begin
+				displayName: 'Height',
+				// % protected region % [Set displayName for Height here] end
 				type: ModelPropertyType.NUMBER,
-				// % protected region % [Set display element type for Width here] off begin
+				// % protected region % [Set display element type for Height here] off begin
 				elementType: ElementType.NUMBER,
-				// % protected region % [Set display element type for Width here] end
-				// % protected region % [Set isSensitive for Width here] off begin
+				// % protected region % [Set display element type for Height here] end
+				// % protected region % [Set isSensitive for Height here] off begin
 				isSensitive: false,
-				// % protected region % [Set isSensitive for Width here] end
-				// % protected region % [Set readonly for Width here] off begin
+				// % protected region % [Set isSensitive for Height here] end
+				// % protected region % [Set readonly for Height here] off begin
 				readOnly: false,
-				// % protected region % [Set readonly for Width here] end
+				// % protected region % [Set readonly for Height here] end
 				validators: [
-					// % protected region % [Add other validators for Width here] off begin
-					// % protected region % [Add other validators for Width here] end
+					// % protected region % [Add other validators for Height here] off begin
+					// % protected region % [Add other validators for Height here] end
 				],
-				// % protected region % [Add any additional model attribute properties for Width here] off begin
-				// % protected region % [Add any additional model attribute properties for Width here] end
+				// % protected region % [Add any additional model attribute properties for Height here] off begin
+				// % protected region % [Add any additional model attribute properties for Height here] end
 			},
 			{
 				name: 'length',
@@ -169,26 +169,26 @@ export class TankModel extends AbstractModel {
 				// % protected region % [Add any additional model attribute properties for Length here] end
 			},
 			{
-				name: 'height',
-				// % protected region % [Set displayName for Height here] off begin
-				displayName: 'Height',
-				// % protected region % [Set displayName for Height here] end
+				name: 'width',
+				// % protected region % [Set displayName for Width here] off begin
+				displayName: 'Width',
+				// % protected region % [Set displayName for Width here] end
 				type: ModelPropertyType.NUMBER,
-				// % protected region % [Set display element type for Height here] off begin
+				// % protected region % [Set display element type for Width here] off begin
 				elementType: ElementType.NUMBER,
-				// % protected region % [Set display element type for Height here] end
-				// % protected region % [Set isSensitive for Height here] off begin
+				// % protected region % [Set display element type for Width here] end
+				// % protected region % [Set isSensitive for Width here] off begin
 				isSensitive: false,
-				// % protected region % [Set isSensitive for Height here] end
-				// % protected region % [Set readonly for Height here] off begin
+				// % protected region % [Set isSensitive for Width here] end
+				// % protected region % [Set readonly for Width here] off begin
 				readOnly: false,
-				// % protected region % [Set readonly for Height here] end
+				// % protected region % [Set readonly for Width here] end
 				validators: [
-					// % protected region % [Add other validators for Height here] off begin
-					// % protected region % [Add other validators for Height here] end
+					// % protected region % [Add other validators for Width here] off begin
+					// % protected region % [Add other validators for Width here] end
 				],
-				// % protected region % [Add any additional model attribute properties for Height here] off begin
-				// % protected region % [Add any additional model attribute properties for Height here] end
+				// % protected region % [Add any additional model attribute properties for Width here] off begin
+				// % protected region % [Add any additional model attribute properties for Width here] end
 			},
 			// % protected region % [Add any additional class field names here] off begin
 			// % protected region % [Add any additional class field names here] end
@@ -288,9 +288,9 @@ export class TankModel extends AbstractModel {
 		if (data) {
 			const json = typeof data === 'string' ? JSON.parse(data) as { [K in keyof TankModel]?: TankModel[K] } : data;
 			this.name = json.name;
-			this.width = json.width;
-			this.length = json.length;
 			this.height = json.height;
+			this.length = json.length;
+			this.width = json.width;
 			this.fishTankIds = json.fishTankIds;
 			// % protected region % [Add any additional logic here after set the data] off begin
 			// % protected region % [Add any additional logic here after set the data] end
@@ -304,9 +304,9 @@ export class TankModel extends AbstractModel {
 		return {
 			...super.toJSON(),
 			name: this.name,
-			width: this.width,
-			length: this.length,
 			height: this.height,
+			length: this.length,
+			width: this.width,
 			fishTankIds: this.fishTankIds,
 			// % protected region % [Add any additional logic here to json] off begin
 			// % protected region % [Add any additional logic here to json] end
