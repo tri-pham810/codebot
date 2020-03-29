@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelink threeWay="true" forceExeedL="true" forceExeedM="true" forceExeedR="true">
+  <model path="/ksatria.firstapp.models/ui/firstapp.angularbotui" position="LEFT" />
+  <model path="/ksatria.firstapp.models/entity/firstapp.springbotentity" position="MIDDLE" />
+  <model path="/ksatria.firstapp.models/security/firstapp.commonsecurity" position="RIGHT" />
+</modelink>
