@@ -57,6 +57,8 @@ public class AdminEntitiesFishPage extends CrudPage {
 	// TODO default handling dataAttribute dateOfBirthField;
 	@FindBy(how = How.XPATH, using = "//input[@id='dateOfBirth-field']")
 	private WebElement dateOfBirthField;
+	@FindBy(how = How.XPATH, using = "//ng-select[@id='born-field']")
+	private WebElement bornField;
 
 	// Outgoing one-to-one
 
@@ -65,10 +67,10 @@ public class AdminEntitiesFishPage extends CrudPage {
 	// Outgoing one-to-many
 
 	// Incoming one-to-many
-	@FindBy(how = How.XPATH, using = "//ng-select[@id='tankId-field']")
-	private WebElement tankField;
 	@FindBy(how = How.XPATH, using = "//ng-select[@id='speciesId-field']")
 	private WebElement speciesField;
+	@FindBy(how = How.XPATH, using = "//ng-select[@id='tankId-field']")
+	private WebElement tankField;
 
 	// Outgoing many-to-many
 
@@ -111,6 +113,7 @@ public class AdminEntitiesFishPage extends CrudPage {
 		// TODO default handling for dataAttribute dateOfBirthField
 		dateOfBirthField.sendKeys(entity.getDateOfBirth().toString());
 
+		DropdownUtils.selectOptionByName(webDriver, bornField, entity.getBorn().getLiteralValue());
 
 		saveButton.click();
 	}

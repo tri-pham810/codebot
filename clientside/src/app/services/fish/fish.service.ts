@@ -71,6 +71,7 @@ export class FishService extends AbstractHttpService<FishModel, FishModelAudit> 
 				name
 				alive
 				dateOfBirth
+				born
 			}
 			${super.fragments('Fish').properties}
 		`,

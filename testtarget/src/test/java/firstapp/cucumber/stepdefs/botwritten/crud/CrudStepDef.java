@@ -38,11 +38,11 @@ import lombok.extern.slf4j.Slf4j;
 public class CrudStepDef extends AbstractStepDef {
 
 	@Inject
-	private TankEntityFactory tankEntityFactory;
-	@Inject
 	private FishEntityFactory fishEntityFactory;
 	@Inject
 	private SpeciesEntityFactory speciesEntityFactory;
+	@Inject
+	private TankEntityFactory tankEntityFactory;
 	@Inject
 	private AdminEntityFactory adminEntityFactory;
 	@Inject
@@ -138,14 +138,14 @@ public class CrudStepDef extends AbstractStepDef {
 		BaseFactory baseFactory;
 		switch (entityName)
 		{
-			case "Tank":
-				baseFactory = tankEntityFactory;
-				break;
 			case "Fish":
 				baseFactory = fishEntityFactory;
 				break;
 			case "Species":
 				baseFactory = speciesEntityFactory;
+				break;
+			case "Tank":
+				baseFactory = tankEntityFactory;
 				break;
 			case "Admin":
 				baseFactory = adminEntityFactory;

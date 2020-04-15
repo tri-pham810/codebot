@@ -19,11 +19,6 @@ import {Params, RouterStateSnapshot} from '@angular/router';
 import {RouterReducerState, RouterStateSerializer} from '@ngrx/router-store';
 import {RoutingEffect} from '../lib/routing/routing.effect';
 import {QueryParams} from '../lib/services/http/interfaces';
-import {TankEffect} from './tank/tank.model.effect';
-import {
-	TankModelState,
-	initialState as TankModelInitialState
-} from './tank/tank.model.state';
 import {FishEffect} from './fish/fish.model.effect';
 import {
 	FishModelState,
@@ -34,6 +29,11 @@ import {
 	SpeciesModelState,
 	initialState as SpeciesModelInitialState
 } from './species/species.model.state';
+import {TankEffect} from './tank/tank.model.effect';
+import {
+	TankModelState,
+	initialState as TankModelInitialState
+} from './tank/tank.model.state';
 import {AdminEffect} from './admin/admin.model.effect';
 import {
 	AdminModelState,
@@ -108,9 +108,9 @@ export interface AbstractModelAudit<E extends AbstractModel> {
  * application.
  */
 export interface ModelState {
-	TankModel: TankModelState;
 	FishModel: FishModelState;
 	SpeciesModel: SpeciesModelState;
+	TankModel: TankModelState;
 	AdminModel: AdminModelState;
 	FishnaticModel: FishnaticModelState;
 	RoleModel: RoleModelState;
@@ -121,11 +121,6 @@ export interface ModelState {
  * Initial model state of the application.
  */
 export const initialModelState: ModelState = {
-	TankModel: {
-		...TankModelInitialState,
-		// % protected region % [Add any additional state for model Tank here] off begin
-		// % protected region % [Add any additional state for model Tank here] end
-	},
 	FishModel: {
 		...FishModelInitialState,
 		// % protected region % [Add any additional state for model Fish here] off begin
@@ -135,6 +130,11 @@ export const initialModelState: ModelState = {
 		...SpeciesModelInitialState,
 		// % protected region % [Add any additional state for model Species here] off begin
 		// % protected region % [Add any additional state for model Species here] end
+	},
+	TankModel: {
+		...TankModelInitialState,
+		// % protected region % [Add any additional state for model Tank here] off begin
+		// % protected region % [Add any additional state for model Tank here] end
 	},
 	AdminModel: {
 		...AdminModelInitialState,
@@ -174,9 +174,9 @@ export interface AppState {
  */
 export const effects = [
 	RoutingEffect,
-	TankEffect,
 	FishEffect,
 	SpeciesEffect,
+	TankEffect,
 	AdminEffect,
 	FishnaticEffect,
 	RoleEffect,

@@ -20,6 +20,8 @@ import firstapp.entities.TankEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.validation.constraints.NotNull;
+import firstapp.entities.enums.*;
+import java.time.*;
 import java.util.Optional;
 import java.util.List;
 
@@ -62,6 +64,22 @@ public interface TankRepository extends AbstractRepository<TankEntity> {
 	 * @return a list of entities that have the given attribute Width
 	 */
 	List<TankEntity> findByWidth(@NotNull Double width);
+
+	/**
+	 * Return an entity or a list of entities that have the given attribute Last Cleanned.
+	 *
+	 * @param lastCleanned the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Last Cleanned
+	 */
+	List<TankEntity> findByLastCleanned(@NotNull OffsetDateTime lastCleanned);
+
+	/**
+	 * Return an entity or a list of entities that have the given attribute Clean.
+	 *
+	 * @param clean the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Clean
+	 */
+	List<TankEntity> findByClean(@NotNull CleanEnum clean);
 
 	// % protected region % [Add any additional class methods here] off begin
 	// % protected region % [Add any additional class methods here] end

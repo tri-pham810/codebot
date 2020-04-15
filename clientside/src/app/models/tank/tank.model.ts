@@ -16,6 +16,7 @@
  */
 import {FormGroup, Validators} from '@angular/forms';
 import {Group, AbstractModel, ModelProperty, ModelPropertyType, ModelRelation, ModelRelationType} from '../../lib/models/abstract.model';
+import {CleanEnum, cleanEnumArray} from '../../enums/clean.enum';
 import {FishModel} from '../fish/fish.model';
 import * as _ from 'lodash';
 import {QueryOperation, Where} from '../../lib/services/http/interfaces';
@@ -80,6 +81,16 @@ export class TankModel extends AbstractModel {
 	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=5, example=1.41}.
 	 */
 	width: number;
+
+	/**
+	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=6, example=2018-10-22}.
+	 */
+	lastCleanned: Date;
+
+	/**
+	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=7, example=Sally}.
+	 */
+	clean: CleanEnum;
 
 	fishTankIds: string[] = [];
 
@@ -190,6 +201,52 @@ export class TankModel extends AbstractModel {
 				// % protected region % [Add any additional model attribute properties for Width here] off begin
 				// % protected region % [Add any additional model attribute properties for Width here] end
 			},
+			{
+				name: 'lastCleanned',
+				// % protected region % [Set displayName for Last Cleanned here] off begin
+				displayName: 'Last Cleanned',
+				// % protected region % [Set displayName for Last Cleanned here] end
+				type: ModelPropertyType.DATE,
+				// % protected region % [Set display element type for Last Cleanned here] off begin
+				elementType: ElementType.DATE,
+				// % protected region % [Set display element type for Last Cleanned here] end
+				// % protected region % [Set isSensitive for Last Cleanned here] off begin
+				isSensitive: false,
+				// % protected region % [Set isSensitive for Last Cleanned here] end
+				// % protected region % [Set readonly for Last Cleanned here] off begin
+				readOnly: false,
+				// % protected region % [Set readonly for Last Cleanned here] end
+				validators: [
+					// % protected region % [Add other validators for Last Cleanned here] off begin
+					// % protected region % [Add other validators for Last Cleanned here] end
+				],
+				// % protected region % [Add any additional model attribute properties for Last Cleanned here] off begin
+				// % protected region % [Add any additional model attribute properties for Last Cleanned here] end
+			},
+			{
+				name: 'clean',
+				// % protected region % [Set displayName for Clean here] off begin
+				displayName: 'Clean',
+				// % protected region % [Set displayName for Clean here] end
+				type: ModelPropertyType.ENUM,
+				enumLiterals: cleanEnumArray,
+				// TODO maybe consider to change to the enum
+				// % protected region % [Set display element type for Clean here] off begin
+				elementType: ElementType.ENUM,
+				// % protected region % [Set display element type for Clean here] end
+				// % protected region % [Set isSensitive for Clean here] off begin
+				isSensitive: false,
+				// % protected region % [Set isSensitive for Clean here] end
+				// % protected region % [Set readonly for Clean here] off begin
+				readOnly: false,
+				// % protected region % [Set readonly for Clean here] end
+				validators: [
+					// % protected region % [Add other validators for Clean here] off begin
+					// % protected region % [Add other validators for Clean here] end
+				],
+				// % protected region % [Add any additional model attribute properties for Clean here] off begin
+				// % protected region % [Add any additional model attribute properties for Clean here] end
+			},
 			// % protected region % [Add any additional class field names here] off begin
 			// % protected region % [Add any additional class field names here] end
 		]);
@@ -291,6 +348,15 @@ export class TankModel extends AbstractModel {
 			this.height = json.height;
 			this.length = json.length;
 			this.width = json.width;
+			if (json.lastCleanned) {
+				this.lastCleanned = new Date(json.lastCleanned);
+			} else {
+				// If no value is present, it can both be partial model or empty value. Regardless simply reassigned it
+				// with the original empty value (null) or lack thereof (undefined).
+				this.lastCleanned = json.lastCleanned;
+			}
+			this.clean = json.clean;
+			this.clean = json.clean;
 			this.fishTankIds = json.fishTankIds;
 			// % protected region % [Add any additional logic here after set the data] off begin
 			// % protected region % [Add any additional logic here after set the data] end
@@ -307,6 +373,8 @@ export class TankModel extends AbstractModel {
 			height: this.height,
 			length: this.length,
 			width: this.width,
+			lastCleanned: this.lastCleanned,
+			clean: this.clean,
 			fishTankIds: this.fishTankIds,
 			// % protected region % [Add any additional logic here to json] off begin
 			// % protected region % [Add any additional logic here to json] end

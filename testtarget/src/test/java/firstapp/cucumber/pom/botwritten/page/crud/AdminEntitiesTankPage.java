@@ -61,6 +61,11 @@ public class AdminEntitiesTankPage extends CrudPage {
 	// TODO default handling dataAttribute widthField;
 	@FindBy(how = How.XPATH, using = "//input[@id='width-field']")
 	private WebElement widthField;
+	// TODO default handling dataAttribute lastCleannedField;
+	@FindBy(how = How.XPATH, using = "//input[@id='lastCleanned-field']")
+	private WebElement lastCleannedField;
+	@FindBy(how = How.XPATH, using = "//ng-select[@id='clean-field']")
+	private WebElement cleanField;
 
 	// Outgoing one-to-one
 
@@ -116,6 +121,10 @@ public class AdminEntitiesTankPage extends CrudPage {
 		// TODO default handling for dataAttribute widthField
 		widthField.sendKeys(entity.getWidth().toString());
 
+		// TODO default handling for dataAttribute lastCleannedField
+		lastCleannedField.sendKeys(entity.getLastCleanned().toString());
+
+		DropdownUtils.selectOptionByName(webDriver, cleanField, entity.getClean().getLiteralValue());
 
 		saveButton.click();
 	}

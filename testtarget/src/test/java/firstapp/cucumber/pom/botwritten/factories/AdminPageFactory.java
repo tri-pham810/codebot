@@ -18,11 +18,11 @@ public class AdminPageFactory {
 	protected Properties properties;
 
 	@Inject
-	EntitiesTankListPage entitiesTankListPage;
-	@Inject
 	EntitiesFishListPage entitiesFishListPage;
 	@Inject
 	EntitiesSpeciesListPage entitiesSpeciesListPage;
+	@Inject
+	EntitiesTankListPage entitiesTankListPage;
 	@Inject
 	UsersAdminListPage usersAdminListPage;
 	@Inject
@@ -32,12 +32,12 @@ public class AdminPageFactory {
 	public CrudListPage createCrudPage(String name) throws Exception {
 		switch (name) {
 
-			case "Tank":
-				return entitiesTankListPage;
 			case "Fish":
 				return entitiesFishListPage;
 			case "Species":
 				return entitiesSpeciesListPage;
+			case "Tank":
+				return entitiesTankListPage;
 			case "Admin":
 				return usersAdminListPage;
 			case "Fishnatic":

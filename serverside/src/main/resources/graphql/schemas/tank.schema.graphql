@@ -23,6 +23,8 @@ type Tank {
 	height: Float
 	length: Float
 	width: Float
+	lastCleanned: String
+	clean: String
 	
 	fishTank: [Fish]
 	# % protected region % [Add any additional field definition here] off begin
@@ -46,6 +48,8 @@ input TankInput {
 	height: Float
 	length: Float
 	width: Float
+	lastCleanned: String
+	clean: String
 	
 	fishTank: [FishInput]
 	fishTankIds: [ID!]

@@ -69,8 +69,8 @@ export class AdminComponent implements OnInit {
 		// % protected region % [Customise or remove the default navigation bar links for entities] off begin
 		let entitySubLinks = [
 				new Link('Fish', [], 'icon-book', 'admin/entities/fish'),
-				new Link('Tank', [], 'icon-book', 'admin/entities/tank'),
 				new Link('Species', [], 'icon-book', 'admin/entities/species'),
+				new Link('Tank', [], 'icon-book', 'admin/entities/tank'),
 		];
 		// % protected region % [Customise or remove the default navigation bar links for entities] end
 

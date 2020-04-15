@@ -32,6 +32,7 @@ Details regarding a given Fish.
 | Name | STRING | Sally | <i class="fa fa-check"> | <ul><li>Attribute must be entered.</li></ul> | Name | 
 | Alive | BOOLEAN | true | <i class="fa fa-times"> | <ul></ul> | Alive | 
 | DateOfBirth | DATE | 2018-10-22 | <i class="fa fa-times"> | <ul></ul> | Date | 
+| Born | STRING | Sally | <i class="fa fa-times"> | <ul></ul> | Born status | 
 
 
 ## Security

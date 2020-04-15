@@ -16,6 +16,7 @@
  */
 import {FormGroup, Validators} from '@angular/forms';
 import {Group, AbstractModel, ModelProperty, ModelPropertyType, ModelRelation, ModelRelationType} from '../../lib/models/abstract.model';
+import {BornEnum, bornEnumArray} from '../../enums/born.enum';
 import {SpeciesModel} from '../species/species.model';
 import {TankModel} from '../tank/tank.model';
 import * as _ from 'lodash';
@@ -77,9 +78,14 @@ export class FishModel extends AbstractModel {
 	 */
 	dateOfBirth: Date;
 
-	tankId: string;
+	/**
+	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=5, example=Sally}.
+	 */
+	born: BornEnum;
 
 	speciesId: string;
+
+	tankId: string;
 
 	static modelPropGroups: { [s: string]: Group } = {
 		// % protected region % [Add groups for the entity here] off begin
@@ -166,6 +172,30 @@ export class FishModel extends AbstractModel {
 				// % protected region % [Add any additional model attribute properties for Date of Birth here] off begin
 				// % protected region % [Add any additional model attribute properties for Date of Birth here] end
 			},
+			{
+				name: 'born',
+				// % protected region % [Set displayName for Born here] off begin
+				displayName: 'Born',
+				// % protected region % [Set displayName for Born here] end
+				type: ModelPropertyType.ENUM,
+				enumLiterals: bornEnumArray,
+				// TODO maybe consider to change to the enum
+				// % protected region % [Set display element type for Born here] off begin
+				elementType: ElementType.ENUM,
+				// % protected region % [Set display element type for Born here] end
+				// % protected region % [Set isSensitive for Born here] off begin
+				isSensitive: false,
+				// % protected region % [Set isSensitive for Born here] end
+				// % protected region % [Set readonly for Born here] off begin
+				readOnly: false,
+				// % protected region % [Set readonly for Born here] end
+				validators: [
+					// % protected region % [Add other validators for Born here] off begin
+					// % protected region % [Add other validators for Born here] end
+				],
+				// % protected region % [Add any additional model attribute properties for Born here] off begin
+				// % protected region % [Add any additional model attribute properties for Born here] end
+			},
 			// % protected region % [Add any additional class field names here] off begin
 			// % protected region % [Add any additional class field names here] end
 		]);
@@ -178,23 +208,6 @@ export class FishModel extends AbstractModel {
 	static getRelations(): { [name: string]: ModelRelation } {
 		return {
 			...super.getRelations(),
-			tank: {
-				type: ModelRelationType.ONE,
-				name: 'tankId',
-				// % protected region % [Customise your label for Tank here] off begin
-				label: 'Tank',
-				// % protected region % [Customise your label for Tank here] end
-				// % protected region % [Customise your display name for Tank here] off begin
-				// TODO change implementation to use OrderBy or create new metamodel property DisplayBy
-				displayName: 'name',
-				// % protected region % [Customise your display name for Tank here] end
-				validators: [
-					// % protected region % [Add other validators for Tank here] off begin
-					// % protected region % [Add other validators for Tank here] end
-				],
-				// % protected region % [Add any additional field for relation Tank here] off begin
-				// % protected region % [Add any additional field for relation Tank here] end
-			},
 			species: {
 				type: ModelRelationType.ONE,
 				name: 'speciesId',
@@ -211,6 +224,23 @@ export class FishModel extends AbstractModel {
 				],
 				// % protected region % [Add any additional field for relation Species here] off begin
 				// % protected region % [Add any additional field for relation Species here] end
+			},
+			tank: {
+				type: ModelRelationType.ONE,
+				name: 'tankId',
+				// % protected region % [Customise your label for Tank here] off begin
+				label: 'Tank',
+				// % protected region % [Customise your label for Tank here] end
+				// % protected region % [Customise your display name for Tank here] off begin
+				// TODO change implementation to use OrderBy or create new metamodel property DisplayBy
+				displayName: 'name',
+				// % protected region % [Customise your display name for Tank here] end
+				validators: [
+					// % protected region % [Add other validators for Tank here] off begin
+					// % protected region % [Add other validators for Tank here] end
+				],
+				// % protected region % [Add any additional field for relation Tank here] off begin
+				// % protected region % [Add any additional field for relation Tank here] end
 			},
 		};
 	}
@@ -264,15 +294,15 @@ export class FishModel extends AbstractModel {
 		const json = typeof data === 'string' ? JSON.parse(data) : data;
 
 		// Incoming one to many
-		if (json.tank) {
-			currentModel.tankId = json.tank.id;
-			returned = _.union(returned, TankModel.deepParse(json.tank));
-		}
-
-		// Incoming one to many
 		if (json.species) {
 			currentModel.speciesId = json.species.id;
 			returned = _.union(returned, SpeciesModel.deepParse(json.species));
+		}
+
+		// Incoming one to many
+		if (json.tank) {
+			currentModel.tankId = json.tank.id;
+			returned = _.union(returned, TankModel.deepParse(json.tank));
 		}
 
 
@@ -296,8 +326,10 @@ export class FishModel extends AbstractModel {
 				// with the original empty value (null) or lack thereof (undefined).
 				this.dateOfBirth = json.dateOfBirth;
 			}
-			this.tankId = json.tankId;
+			this.born = json.born;
+			this.born = json.born;
 			this.speciesId = json.speciesId;
+			this.tankId = json.tankId;
 			// % protected region % [Add any additional logic here after set the data] off begin
 			// % protected region % [Add any additional logic here after set the data] end
 		}
@@ -312,8 +344,9 @@ export class FishModel extends AbstractModel {
 			name: this.name,
 			alive: this.alive,
 			dateOfBirth: this.dateOfBirth,
-			tankId: this.tankId,
+			born: this.born,
 			speciesId: this.speciesId,
+			tankId: this.tankId,
 			// % protected region % [Add any additional logic here to json] off begin
 			// % protected region % [Add any additional logic here to json] end
 		};
@@ -349,8 +382,8 @@ export class FishModel extends AbstractModel {
 		return _.omit(diff, [
 			'created',
 			'modified',
-			'tankIds',
 			'speciesIds',
+			'tankIds',
 			// % protected region % [Add any other fields to omit here] off begin
 			// % protected region % [Add any other fields to omit here] end
 		]);

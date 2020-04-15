@@ -18,6 +18,10 @@
     <Acl Uuid="4d230a97-2a3b-4bff-995f-b46d0b2cdc38" Group="fd5474f9-af0f-4d0e-aeb9-b221a8c93a68" SecurityScheme="dfb49f05-0e0a-427e-86c8-c67bc655c6c6" Create="true" Read="true" Update="true" Delete="true"/>
     <Acl Uuid="9a6bce7c-9bb6-46c0-9f31-0854683e83d1" Group="fd5474f9-af0f-4d0e-aeb9-b221a8c93a68" SecurityScheme="698fd4c0-c323-4f4e-b225-0129d5d840dc" Create="true" Read="true" Update="true" Delete="true"/>
     <Acl Uuid="e17aecd3-423d-49b6-99eb-996563569c3a" Group="fd5474f9-af0f-4d0e-aeb9-b221a8c93a68" SecurityScheme="356ebb0d-1e65-4d3b-849a-d8bddd605974" Create="true" Read="true" Update="true" Delete="true"/>
+    <Acl Uuid="63e18f00-31df-4f2d-9dfc-8b4d81e0ca14" Group="fd5474f9-af0f-4d0e-aeb9-b221a8c93a68" SecurityScheme="8cce540d-1169-4e80-82e9-8640d243d57d" Read="true"/>
+    <Acl Uuid="584e3b71-6c9f-444d-aabe-ca05682575da" Group="f380752b-ee70-4a91-84d5-a46fe3530b78" SecurityScheme="8cce540d-1169-4e80-82e9-8640d243d57d" Read="true"/>
+    <Acl Uuid="2db14cf0-da21-44e3-b738-0d5fa871dee2" Group="fd5474f9-af0f-4d0e-aeb9-b221a8c93a68" SecurityScheme="8c79164c-cd86-43bf-9591-490e2a301411" Read="true"/>
+    <Acl Uuid="4e5a6529-77e6-443a-80aa-f68439f0522d" Group="f380752b-ee70-4a91-84d5-a46fe3530b78" SecurityScheme="8c79164c-cd86-43bf-9591-490e2a301411" Read="true"/>
   </Authorization>
   <Auditing/>
   <SecuritySchemes>
@@ -44,6 +48,12 @@
     </SecuritySchemes>
     <SecuritySchemes Uuid="55b8ed55-8aef-4315-bada-6e90cf954217" Name="Admin Entity">
       <Object href="../entity/firstapp.springbotentity#55b8ed55-8aef-4315-bada-6e90cf954217"/>
+    </SecuritySchemes>
+    <SecuritySchemes Uuid="8cce540d-1169-4e80-82e9-8640d243d57d" Name="Unnnamed Page Page">
+      <Object href="../ui/firstapp.angularbotui#8cce540d-1169-4e80-82e9-8640d243d57d"/>
+    </SecuritySchemes>
+    <SecuritySchemes Uuid="8c79164c-cd86-43bf-9591-490e2a301411" Name="Unnnamed Page Page">
+      <Object href="../ui/firstapp.angularbotui#8c79164c-cd86-43bf-9591-490e2a301411"/>
     </SecuritySchemes>
   </SecuritySchemes>
   <TwoFactorAuthenticationProviders/>

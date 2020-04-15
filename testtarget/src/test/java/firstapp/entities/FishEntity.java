@@ -16,6 +16,7 @@
  */
 package firstapp.entities;
 
+import firstapp.entities.enums.*;
 import lombok.*;
 
 import java.time.*;
@@ -35,16 +36,6 @@ public class FishEntity extends AbstractEntity {
 	private void initialiseReferences() {
 
 
-		var TankFishTankOneMany = new EntityReference();
-			TankFishTankOneMany.entityName = "Tank";
-			TankFishTankOneMany.oppositeName = "Tank";
-			TankFishTankOneMany.name = "FishTank";
-			TankFishTankOneMany.optional = true;
-			TankFishTankOneMany.type = "One";
-			TankFishTankOneMany.oppositeType = "Many";
-
-		References.add(TankFishTankOneMany);
-
 		var SpeciesFishSpeciesOneMany = new EntityReference();
 			SpeciesFishSpeciesOneMany.entityName = "Species";
 			SpeciesFishSpeciesOneMany.oppositeName = "Species";
@@ -54,6 +45,16 @@ public class FishEntity extends AbstractEntity {
 			SpeciesFishSpeciesOneMany.oppositeType = "Many";
 
 		References.add(SpeciesFishSpeciesOneMany);
+
+		var TankFishTankOneMany = new EntityReference();
+			TankFishTankOneMany.entityName = "Tank";
+			TankFishTankOneMany.oppositeName = "Tank";
+			TankFishTankOneMany.name = "FishTank";
+			TankFishTankOneMany.optional = true;
+			TankFishTankOneMany.type = "One";
+			TankFishTankOneMany.oppositeType = "Many";
+
+		References.add(TankFishTankOneMany);
 	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -75,6 +76,11 @@ public class FishEntity extends AbstractEntity {
 	@ToString.Include
 	// % protected region % [Modify attribute annotation for Date of Birth here] end
 	private OffsetDateTime dateOfBirth;
+
+	// % protected region % [Modify attribute annotation for Born here] off begin
+	@ToString.Include
+	// % protected region % [Modify attribute annotation for Born here] end
+	private BornEnum born;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -100,9 +106,9 @@ public class FishEntity extends AbstractEntity {
 	//
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	private TankEntity tank;
-
 	private SpeciesEntity species;
+
+	private TankEntity tank;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -132,60 +138,6 @@ public class FishEntity extends AbstractEntity {
 	//
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	/**
-	 * Similar to {@link this#setTank(TankEntity, boolean)} but
-	 * default to true for reverse add.
-	 *
-	 * @param entity the given TankEntity to be set to this entity
-	 */
-	public void setTank(@NonNull TankEntity entity) {
-		setTank(entity, true);
-	}
-
-	/**
-	 * Set or update the tank in this entity with single TankEntity.
-	 *
-	 * @param entity the given TankEntity to be set or updated to tank
-	 * @param reverseAdd whether this entity should be set or updated to the given entity
-	 */
-	public void setTank(@NonNull TankEntity entity, boolean reverseAdd) {
-		// % protected region % [Add any additional logic here before the main logic for setTank here] off begin
-		// % protected region % [Add any additional logic here before the main logic for setTank here] end
-
-		if (sameAsFormer(this.tank, entity)) {
-			return;
-		}
-
-		if (this.tank != null) {
-			this.tank.removeFishTank(this, false);
-		}
-		this.tank = entity;
-		if (reverseAdd) {
-			this.tank.addFishTank(this, false);
-		}
-
-		// % protected region % [Add any additional logic here after the main logic for setTank here] off begin
-		// % protected region % [Add any additional logic here after the main logic for setTank here] end
-	}
-
-	/**
-	 * Similar to {@link this#unsetTank(boolean)} but default to true.
-	 */
-	public void unsetTank() {
-		this.unsetTank(true);
-	}
-
-	/**
-	 * Remove Tank in this entity.
-	 *
-	 * @param reverse whether this entity should be removed from the given entity
-	 */
-	public void unsetTank(boolean reverse) {
-		if (reverse && this.tank != null) {
-			this.tank.removeFishTank(this, false);
-		}
-		this.tank = null;
-	}
 	/**
 	 * Similar to {@link this#setSpecies(SpeciesEntity, boolean)} but
 	 * default to true for reverse add.
@@ -239,6 +191,60 @@ public class FishEntity extends AbstractEntity {
 			this.species.removeFishSpecies(this, false);
 		}
 		this.species = null;
+	}
+	/**
+	 * Similar to {@link this#setTank(TankEntity, boolean)} but
+	 * default to true for reverse add.
+	 *
+	 * @param entity the given TankEntity to be set to this entity
+	 */
+	public void setTank(@NonNull TankEntity entity) {
+		setTank(entity, true);
+	}
+
+	/**
+	 * Set or update the tank in this entity with single TankEntity.
+	 *
+	 * @param entity the given TankEntity to be set or updated to tank
+	 * @param reverseAdd whether this entity should be set or updated to the given entity
+	 */
+	public void setTank(@NonNull TankEntity entity, boolean reverseAdd) {
+		// % protected region % [Add any additional logic here before the main logic for setTank here] off begin
+		// % protected region % [Add any additional logic here before the main logic for setTank here] end
+
+		if (sameAsFormer(this.tank, entity)) {
+			return;
+		}
+
+		if (this.tank != null) {
+			this.tank.removeFishTank(this, false);
+		}
+		this.tank = entity;
+		if (reverseAdd) {
+			this.tank.addFishTank(this, false);
+		}
+
+		// % protected region % [Add any additional logic here after the main logic for setTank here] off begin
+		// % protected region % [Add any additional logic here after the main logic for setTank here] end
+	}
+
+	/**
+	 * Similar to {@link this#unsetTank(boolean)} but default to true.
+	 */
+	public void unsetTank() {
+		this.unsetTank(true);
+	}
+
+	/**
+	 * Remove Tank in this entity.
+	 *
+	 * @param reverse whether this entity should be removed from the given entity
+	 */
+	public void unsetTank(boolean reverse) {
+		if (reverse && this.tank != null) {
+			this.tank.removeFishTank(this, false);
+		}
+		this.tank = null;
 	}
 
 	// % protected region % [Add any additional class methods  here] off begin
