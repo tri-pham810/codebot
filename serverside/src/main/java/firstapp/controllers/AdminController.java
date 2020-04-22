@@ -33,7 +33,7 @@ import java.util.UUID;
 // % protected region % [Add any additional imports here] end
 
 /**
- * Controller used to handle all REST operations regarding Admin
+ * Controller used to handle all REST operations regarding Adminf
  */
 @Api(description = "Set of endpoints for Creating, Retrieving, Updating and Deleting of Admins.")
 @RestController

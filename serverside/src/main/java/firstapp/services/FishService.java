@@ -548,7 +548,13 @@ public class FishService extends AbstractService<FishEntity, FishRepository, Fis
 				// % protected region % [Add any additional logic after the query parameters of modified here] end
 
 				break;
-			// % protected region % [Add any additional cases for the custom query parameters here] off begin
+			// % protected region % [Add any additional cases for the custom query parameters here] on begin
+			case "fishAlive":
+				predicate = entity.alive.eq(Boolean.valueOf(condition.getValue()));
+				break;
+			case "speciesName":
+				predicate = entity.species.name.containsIgnoreCase(condition.getValue());
+				break;
 			// % protected region % [Add any additional cases for the custom query parameters here] end
 		}
 
@@ -686,6 +692,11 @@ public class FishService extends AbstractService<FishEntity, FishRepository, Fis
 
 
 
-	// % protected region % [Add any additional class methods here] off begin
+	// % protected region % [Add any additional class methods here] on begin
+	@PreAuthorize("hasPermission('FishEntity', 'read')")
+	public List getFishByAliveAndPurchased() {
+		List entities = Lists.newArrayList(repository.findByAliveAndPurchased());
+		return entities;
+	}
 	// % protected region % [Add any additional class methods here] end
 }
