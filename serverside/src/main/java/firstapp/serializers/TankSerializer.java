@@ -48,7 +48,7 @@ public class TankSerializer extends AbstractSerializer<TankEntity> {
 		writeDoubleField(gen, "height", value.getHeight());
 		writeDoubleField(gen, "length", value.getLength());
 		writeDoubleField(gen, "width", value.getWidth());
-		writeOffsetDateTimeField(gen, "lastCleanned", value.getLastCleanned());
+		writeOffsetDateTimeField(gen, "lastCleaned", value.getLastCleaned());
 		if (value.getClean() != null) {
 			writeStringField(gen, "clean", value.getClean().toString());
 		}

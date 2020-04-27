@@ -73,10 +73,10 @@ public class TankEntity extends AbstractEntity {
 	// % protected region % [Modify attribute annotation for Width here] end
 	private Double width;
 
-	// % protected region % [Modify attribute annotation for Last Cleanned here] off begin
+	// % protected region % [Modify attribute annotation for Last Cleaned here] off begin
 	@ToString.Include
-	// % protected region % [Modify attribute annotation for Last Cleanned here] end
-	private OffsetDateTime lastCleanned;
+	// % protected region % [Modify attribute annotation for Last Cleaned here] end
+	private OffsetDateTime lastCleaned;
 
 	// % protected region % [Modify attribute annotation for Clean here] off begin
 	@ToString.Include

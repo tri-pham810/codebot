@@ -66,12 +66,12 @@ public interface TankRepository extends AbstractRepository<TankEntity> {
 	List<TankEntity> findByWidth(@NotNull Double width);
 
 	/**
-	 * Return an entity or a list of entities that have the given attribute Last Cleanned.
+	 * Return an entity or a list of entities that have the given attribute Last Cleaned.
 	 *
-	 * @param lastCleanned the attribute against which the entities will be retrieved
-	 * @return a list of entities that have the given attribute Last Cleanned
+	 * @param lastCleaned the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Last Cleaned
 	 */
-	List<TankEntity> findByLastCleanned(@NotNull OffsetDateTime lastCleanned);
+	List<TankEntity> findByLastCleaned(@NotNull OffsetDateTime lastCleaned);
 
 	/**
 	 * Return an entity or a list of entities that have the given attribute Clean.

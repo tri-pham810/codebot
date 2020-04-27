@@ -75,6 +75,7 @@ export class FrontendComponent implements OnInit {
 
 		// % protected region % [Customise or remove the default navigation bar links for entities] off begin
 		let entityLinks = [
+				new Link('Welcome', [], 'icon-book', 'welcome'),
 				new Link('Stats', [], 'icon-book', 'stats'),
 				new Link('Tank', [], 'icon-book', 'tank'),
 				new Link('Species', [], 'icon-book', 'species'),
@@ -84,7 +85,7 @@ export class FrontendComponent implements OnInit {
 		// % protected region % [Customise or remove the default navigation bar links] off begin
 		this.navBarLinks.push(
 			new LinkList([
-				new Link('Welcome', [], 'icon-home', ''),
+				new Link('KMS Home', [], 'icon-home', ''),
 			]),
 			new LinkList(entityLinks),
 			new LinkList([

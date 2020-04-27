@@ -14,46 +14,20 @@
  * This file is bot-written.
  * Any changes out side of "protected regions" will be lost next time the bot makes any changes.
  */
-package firstapp.cucumber.stepdefs.login;
 
-import firstapp.cucumber.pom.botwritten.page.LoginPage;
-import firstapp.cucumber.stepdefs.botwritten.AbstractStepDef;
-import com.google.inject.Inject;
-import io.cucumber.java.en.*;
-import lombok.extern.slf4j.Slf4j;
+import {Component} from '@angular/core';
 
 // % protected region % [Add any additional imports here] off begin
 // % protected region % [Add any additional imports here] end
 
-@Slf4j
-public class LoginPageStepDef extends AbstractStepDef {
-
-	@Inject
-	private LoginPage loginPage;
-
+@Component({
+	selector: 'cb-kms-home-wrapping-view-view',
+	templateUrl: './kms_home_wrapping_view.view.component.html',
+	styleUrls: ['./kms_home_wrapping_view.view.component.scss']
+})
+export class KmsHomeWrappingViewViewComponent {
 	// % protected region % [Add any additional class fields here] off begin
 	// % protected region % [Add any additional class fields here] end
-
-	@Given("^I navigate to the login page$")
-	public void navigate() {
-		loginPage.navigate();
-	}
-
-	@When("I login with username {string} with password {string}")
-	public void iLoginWithUsernameWithPassword(String username, String password) throws InterruptedException {
-		loginPage.insertUsername(username);
-		loginPage.insertPassword(password);
-		loginPage.clickLogin();
-	}
-
-	@Then("I should see the homepage")
-	public void iShouldSeeTheHomepage() {
-			webDriverWait.until(webDriver -> webDriver.getCurrentUrl().equals(properties.getProperty("selenium.url") + "/kms-home/kms-home-wrapping-tile"));
-	}
-
-	@When("I login with admin account")
-	public void iLoginWithAdminAccount() throws InterruptedException {
-	}
 
 	// % protected region % [Add any additional class methods here] off begin
 	// % protected region % [Add any additional class methods here] end

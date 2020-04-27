@@ -20,7 +20,7 @@
     <Attributes xsi:type="springbotEntity:AttributeDecimal" Uuid="a338278d-aa46-48aa-a7b4-988488c7b643" Name="Height" DocoDescription="Height"/>
     <Attributes xsi:type="springbotEntity:AttributeDecimal" Uuid="cdb34267-e5ad-4c52-9f86-9f17a69c6abd" Name="Length" DocoDescription="Length"/>
     <Attributes xsi:type="springbotEntity:AttributeDecimal" Uuid="830e49e8-9cb8-45a9-8554-c0431573fa6c" Name="Width" DocoDescription="Width"/>
-    <Attributes xsi:type="springbotEntity:AttributeDate" Uuid="a7da3ed2-0737-440c-a0ee-2ea4b0b8fecb" Name="Last Cleanned" DocoDescription="Last date get cleanned"/>
+    <Attributes xsi:type="springbotEntity:AttributeDate" Uuid="a7da3ed2-0737-440c-a0ee-2ea4b0b8fecb" Name="Last Cleaned" DocoDescription="Last date get cleanned"/>
     <Attributes xsi:type="springbotEntity:AttributeEnum" Uuid="d1041ba3-087d-4940-9859-8fbd0025bda0" Name="Clean" DocoDescription="Clean status"/>
   </Entities>
   <Entities xsi:type="springbotEntity:Entity" Uuid="55b8ed55-8aef-4315-bada-6e90cf954217" Name="Admin" DocoDescription="Behaviour">

@@ -85,7 +85,7 @@ export class TankModel extends AbstractModel {
 	/**
 	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=6, example=2018-10-22}.
 	 */
-	lastCleanned: Date;
+	lastCleaned: Date;
 
 	/**
 	 * {docoDescription=TODO: Get doco description, springFoxDataTypeProperty=, position=7, example=Sally}.
@@ -202,26 +202,26 @@ export class TankModel extends AbstractModel {
 				// % protected region % [Add any additional model attribute properties for Width here] end
 			},
 			{
-				name: 'lastCleanned',
-				// % protected region % [Set displayName for Last Cleanned here] off begin
-				displayName: 'Last Cleanned',
-				// % protected region % [Set displayName for Last Cleanned here] end
+				name: 'lastCleaned',
+				// % protected region % [Set displayName for Last Cleaned here] off begin
+				displayName: 'Last Cleaned',
+				// % protected region % [Set displayName for Last Cleaned here] end
 				type: ModelPropertyType.DATE,
-				// % protected region % [Set display element type for Last Cleanned here] off begin
+				// % protected region % [Set display element type for Last Cleaned here] off begin
 				elementType: ElementType.DATE,
-				// % protected region % [Set display element type for Last Cleanned here] end
-				// % protected region % [Set isSensitive for Last Cleanned here] off begin
+				// % protected region % [Set display element type for Last Cleaned here] end
+				// % protected region % [Set isSensitive for Last Cleaned here] off begin
 				isSensitive: false,
-				// % protected region % [Set isSensitive for Last Cleanned here] end
-				// % protected region % [Set readonly for Last Cleanned here] off begin
+				// % protected region % [Set isSensitive for Last Cleaned here] end
+				// % protected region % [Set readonly for Last Cleaned here] off begin
 				readOnly: false,
-				// % protected region % [Set readonly for Last Cleanned here] end
+				// % protected region % [Set readonly for Last Cleaned here] end
 				validators: [
-					// % protected region % [Add other validators for Last Cleanned here] off begin
-					// % protected region % [Add other validators for Last Cleanned here] end
+					// % protected region % [Add other validators for Last Cleaned here] off begin
+					// % protected region % [Add other validators for Last Cleaned here] end
 				],
-				// % protected region % [Add any additional model attribute properties for Last Cleanned here] off begin
-				// % protected region % [Add any additional model attribute properties for Last Cleanned here] end
+				// % protected region % [Add any additional model attribute properties for Last Cleaned here] off begin
+				// % protected region % [Add any additional model attribute properties for Last Cleaned here] end
 			},
 			{
 				name: 'clean',
@@ -348,12 +348,12 @@ export class TankModel extends AbstractModel {
 			this.height = json.height;
 			this.length = json.length;
 			this.width = json.width;
-			if (json.lastCleanned) {
-				this.lastCleanned = new Date(json.lastCleanned);
+			if (json.lastCleaned) {
+				this.lastCleaned = new Date(json.lastCleaned);
 			} else {
 				// If no value is present, it can both be partial model or empty value. Regardless simply reassigned it
 				// with the original empty value (null) or lack thereof (undefined).
-				this.lastCleanned = json.lastCleanned;
+				this.lastCleaned = json.lastCleaned;
 			}
 			this.clean = json.clean;
 			this.clean = json.clean;
@@ -373,7 +373,7 @@ export class TankModel extends AbstractModel {
 			height: this.height,
 			length: this.length,
 			width: this.width,
-			lastCleanned: this.lastCleanned,
+			lastCleaned: this.lastCleaned,
 			clean: this.clean,
 			fishTankIds: this.fishTankIds,
 			// % protected region % [Add any additional logic here to json] off begin

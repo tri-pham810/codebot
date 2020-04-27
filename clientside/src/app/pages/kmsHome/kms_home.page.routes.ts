@@ -17,7 +17,7 @@
 
 import {Routes} from '@angular/router';
 import {RoleGuard} from '../../lib/guards/role.guard';
-import {WelcomeWrappingTileTileComponent} from '../../tiles/custom/welcomeWrappingTile/welcome_wrapping_tile.tile.component';
+import {KmsHomeWrappingTileTileComponent} from '../../tiles/custom/kmsHomeWrappingTile/kms_home_wrapping_tile.tile.component';
 
 // % protected region % [Add any additional imports here] off begin
 // % protected region % [Add any additional imports here] end
@@ -27,35 +27,42 @@ import {WelcomeWrappingTileTileComponent} from '../../tiles/custom/welcomeWrappi
  */
 export const appRoutes: Routes = [
 	{
-		path: 'welcome',
+		path: '',
+		// % protected region % [Configure component or redirect homepage tile here] off begin
+		redirectTo: 'kms-home',
+		// % protected region % [Configure component or redirect homepage tile here] end
+		pathMatch: 'full',
+		// % protected region % [Add any additional route configuration for homepage tile here] off begin
+		// % protected region % [Add any additional route configuration for homepage tile here] end
+	},
+	{
+		path: 'kms-home',
 		children: [
 			{
 				path: '',
 				pathMatch: 'full',
-				redirectTo: 'welcome-wrapping-tile',
+				redirectTo: 'kms-home-wrapping-tile',
 			},
 			{
-				path: 'welcome-wrapping-tile',
-				// % protected region % [Configure component or redirect for Welcome Wrapping Tile here] off begin
-				component: WelcomeWrappingTileTileComponent,
-				// % protected region % [Configure component or redirect for Welcome Wrapping Tile here] end
+				path: 'kms-home-wrapping-tile',
+				// % protected region % [Configure component or redirect for KMS Home Wrapping Tile here] off begin
+				component: KmsHomeWrappingTileTileComponent,
+				// % protected region % [Configure component or redirect for KMS Home Wrapping Tile here] end
 				canActivate: [
 					RoleGuard,
-					// % protected region % [Add any additional guards for Welcome Wrapping Tile here] off begin
-					// % protected region % [Add any additional guards for Welcome Wrapping Tile here] end
+					// % protected region % [Add any additional guards for KMS Home Wrapping Tile here] off begin
+					// % protected region % [Add any additional guards for KMS Home Wrapping Tile here] end
 				],
 				data: {
 					expectedRoles: [
-						'FISHNATIC',
-						'ADMIN',
 						// % protected region % [Add additional roles here] off begin
 						// % protected region % [Add additional roles here] end
 					],
-					// % protected region % [Customise your data passed to data for Welcome Wrapping Tile here] off begin
-					// % protected region % [Customise your data passed to data for Welcome Wrapping Tile here] end
+					// % protected region % [Customise your data passed to data for KMS Home Wrapping Tile here] off begin
+					// % protected region % [Customise your data passed to data for KMS Home Wrapping Tile here] end
 				},
-				// % protected region % [Add any additional route configuration for Welcome Wrapping Tile here] off begin
-				// % protected region % [Add any additional route configuration for Welcome Wrapping Tile here] end
+				// % protected region % [Add any additional route configuration for KMS Home Wrapping Tile here] off begin
+				// % protected region % [Add any additional route configuration for KMS Home Wrapping Tile here] end
 			},
 		]
 	}

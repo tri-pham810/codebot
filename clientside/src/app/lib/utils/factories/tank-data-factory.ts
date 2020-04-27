@@ -79,7 +79,7 @@ export class TankDataFactory extends AbstractDataFactory<TankModel> {
 		model.height = faker.random.number();
 		model.length = faker.random.number();
 		model.width = faker.random.number();
-		model.lastCleanned = new Date();
+		model.lastCleaned = new Date();
 		// % protected region % [Add custom enum randomisation here] off begin
 		// Always initialise to the first enum literal. Turn on the protected region and put in your own custom enum
 		// initialisation logic.

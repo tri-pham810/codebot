@@ -212,21 +212,21 @@ public class TankService extends AbstractService<TankEntity, TankRepository, Tan
 	}
 
 	/**
-	 * Return an entity or a list of entities that have the given attribute Last Cleanned.
+	 * Return an entity or a list of entities that have the given attribute Last Cleaned.
 	 *
-	 * @param lastCleanned the attribute against which the entities will be retrieved
-	 * @return a list of entities that have the given attribute Last Cleanned
+	 * @param lastCleaned the attribute against which the entities will be retrieved
+	 * @return a list of entities that have the given attribute Last Cleaned
 	 */
 	@PreAuthorize("hasPermission('TankEntity', 'read')")
 	@Transactional(readOnly = true)
-	public List<TankEntity> findByLastCleanned(OffsetDateTime lastCleanned) {
-		// % protected region % [Add any additional logic for findByLastCleanned before the main body here] off begin
-		// % protected region % [Add any additional logic for findByLastCleanned before the main body here] end
+	public List<TankEntity> findByLastCleaned(OffsetDateTime lastCleaned) {
+		// % protected region % [Add any additional logic for findByLastCleaned before the main body here] off begin
+		// % protected region % [Add any additional logic for findByLastCleaned before the main body here] end
 
-		List<TankEntity> entities = Lists.newArrayList(repository.findByLastCleanned(lastCleanned));
+		List<TankEntity> entities = Lists.newArrayList(repository.findByLastCleaned(lastCleaned));
 
-		// % protected region % [Add any additional logic for findByLastCleanned before returning the entities here] off begin
-		// % protected region % [Add any additional logic for findByLastCleanned before returning the entities here] end
+		// % protected region % [Add any additional logic for findByLastCleaned before returning the entities here] off begin
+		// % protected region % [Add any additional logic for findByLastCleaned before returning the entities here] end
 
 		return entities;
 	}

@@ -53,6 +53,7 @@ import {AdminAdminPageModule} from './admin/pages/admin/admin.admin.page.module'
 import {FishnaticAdminPageModule} from './admin/pages/fishnatic/fishnatic.admin.page.module';
 
 import {WelcomePageModule} from './pages/welcome/welcome.page.module';
+import {KmsHomePageModule} from './pages/kmsHome/kms_home.page.module';
 import {StatsPageModule} from './pages/stats/stats.page.module';
 import {TankPageModule} from './pages/tank/tank.page.module';
 import {SpeciesPageModule} from './pages/species/species.page.module';
@@ -144,6 +145,7 @@ if (environment.production) {
 		CommonComponentModule,
 		AdminHomePageModule,
 		WelcomePageModule,
+		KmsHomePageModule,
 		StatsPageModule,
 		TankPageModule,
 		SpeciesPageModule,

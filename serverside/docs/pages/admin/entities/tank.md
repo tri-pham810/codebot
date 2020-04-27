@@ -33,7 +33,7 @@ Details regarding a given Tank.
 | Height | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> | Height | 
 | Length | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> | Length | 
 | Width | NUMBER | 1.41 | <i class="fa fa-times"> | <ul></ul> | Width | 
-| LastCleanned | DATE | 2018-10-22 | <i class="fa fa-times"> | <ul></ul> | Last date get cleanned | 
+| LastCleaned | DATE | 2018-10-22 | <i class="fa fa-times"> | <ul></ul> | Last date get cleanned | 
 | Clean | STRING | Sally | <i class="fa fa-times"> | <ul></ul> | Clean status | 
 
 
