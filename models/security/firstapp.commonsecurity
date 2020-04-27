@@ -22,6 +22,8 @@
     <Acl Uuid="584e3b71-6c9f-444d-aabe-ca05682575da" Group="f380752b-ee70-4a91-84d5-a46fe3530b78" SecurityScheme="8cce540d-1169-4e80-82e9-8640d243d57d" Read="true"/>
     <Acl Uuid="2db14cf0-da21-44e3-b738-0d5fa871dee2" Group="fd5474f9-af0f-4d0e-aeb9-b221a8c93a68" SecurityScheme="8c79164c-cd86-43bf-9591-490e2a301411" Read="true"/>
     <Acl Uuid="4e5a6529-77e6-443a-80aa-f68439f0522d" Group="f380752b-ee70-4a91-84d5-a46fe3530b78" SecurityScheme="8c79164c-cd86-43bf-9591-490e2a301411" Read="true"/>
+    <Acl Uuid="c572c1a9-4134-4e8b-b0fa-6a1561c96842" Group="f380752b-ee70-4a91-84d5-a46fe3530b78" SecurityScheme="ac5dad51-da0f-402e-8029-ee7bb6798a80" Read="true"/>
+    <Acl Uuid="223ed908-2172-4c38-bf92-5424fa8b5875" Group="fd5474f9-af0f-4d0e-aeb9-b221a8c93a68" SecurityScheme="ac5dad51-da0f-402e-8029-ee7bb6798a80" Read="true"/>
   </Authorization>
   <Auditing/>
   <SecuritySchemes>
@@ -54,6 +56,9 @@
     </SecuritySchemes>
     <SecuritySchemes Uuid="8c79164c-cd86-43bf-9591-490e2a301411" Name="Unnnamed Page Page">
       <Object href="../ui/firstapp.angularbotui#8c79164c-cd86-43bf-9591-490e2a301411"/>
+    </SecuritySchemes>
+    <SecuritySchemes Uuid="ac5dad51-da0f-402e-8029-ee7bb6798a80" Name="KMS Home Page">
+      <Object href="../ui/firstapp.angularbotui#ac5dad51-da0f-402e-8029-ee7bb6798a80"/>
     </SecuritySchemes>
   </SecuritySchemes>
   <TwoFactorAuthenticationProviders/>

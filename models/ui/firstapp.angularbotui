@@ -6,46 +6,46 @@
   <Pages xsi:type="angularbotUi:Page" Uuid="bcc5ad80-a827-457d-ae48-f017830928a9" Name="Tank" Title="Tank" Description="Tank"/>
   <Pages xsi:type="angularbotUi:Page" Uuid="9f397c91-73a7-4719-957e-ae09e8780586" Name="Species" Title="Species" Description="Species"/>
   <Pages xsi:type="angularbotUi:Page" Uuid="c6be7aaa-0e38-4384-bece-e3e3a172e8bc" Name="Fish" Title="Fish" Description="Fish"/>
-  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="d04949de-b044-4019-fd7b-d9b6874e1ebd" Name="Welcome Wrapping Tile" IsDefaultTile="true">
-    <ViewElements xsi:type="angularbotUi:View" Uuid="2343c213-27a4-430f-d664-304da0cc1d51" Name="Welcome Wrapping View" DefaultView="true"/>
+  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="7c6b4f6e-2afc-4a69-af7a-9c75d705384c" Name="Welcome Wrapping Tile" IsDefaultTile="true">
+    <ViewElements xsi:type="angularbotUi:View" Uuid="de5bc190-ec2b-4c6c-9783-8432ef6bba42" Name="Welcome Wrapping View" DefaultView="true"/>
   </Tiles>
   <Tiles xsi:type="angularbotUi:TileCustom" Uuid="ded3844c-3fc5-47a1-a4a6-e38623351906" Name="Welcome"/>
-  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="e6266b1b-a3e6-4924-b516-dedb1f5c595f" Name="KMS Home Wrapping Tile" IsDefaultTile="true">
-    <ViewElements xsi:type="angularbotUi:View" Uuid="e60d0b53-7a99-4c6f-f756-6da43f368100" Name="KMS Home Wrapping View" DefaultView="true"/>
+  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="30ab1bb7-2ba7-4669-b7bf-92e430c8df3c" Name="KMS Home Wrapping Tile" IsDefaultTile="true">
+    <ViewElements xsi:type="angularbotUi:View" Uuid="e2224e08-6aff-4fbc-c807-7652bd35ea6d" Name="KMS Home Wrapping View" DefaultView="true"/>
   </Tiles>
   <Tiles xsi:type="angularbotUi:TileCustom" Uuid="079749e4-b590-46f4-adab-4c2c587a3b98" Name="KMS Home"/>
-  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="6523f698-cdb2-4572-cb46-7f6195bf4446" Name="Stats Wrapping Tile" IsDefaultTile="true">
-    <ViewElements xsi:type="angularbotUi:View" Uuid="768c737e-3950-4071-d086-9d78cd9a7bf2" Name="Stats Wrapping View" DefaultView="true"/>
+  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="918eca70-2bc6-4753-80af-0b224982b5c1" Name="Stats Wrapping Tile" IsDefaultTile="true">
+    <ViewElements xsi:type="angularbotUi:View" Uuid="1988275d-ffff-4fdc-ff2b-63dcea1a0a5f" Name="Stats Wrapping View" DefaultView="true"/>
   </Tiles>
   <Tiles xsi:type="angularbotUi:TileCustom" Uuid="39bdd4f5-aca8-4f1e-b406-095fdd1c7124" Name="Stats"/>
-  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="b10ad8aa-9ff0-43da-9e6c-e8c2ab4d5239" Name="Tank Wrapping Tile" IsDefaultTile="true">
-    <ViewElements xsi:type="angularbotUi:View" Uuid="aaf63f6d-f16a-4afe-cdc9-8609885a9748" Name="Tank Wrapping View" DefaultView="true"/>
+  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="1c6dc477-3821-48dc-c743-2e738ceae71d" Name="Tank Wrapping Tile" IsDefaultTile="true">
+    <ViewElements xsi:type="angularbotUi:View" Uuid="8a47f2a5-60a3-42bf-beb6-1115d7e1d346" Name="Tank Wrapping View" DefaultView="true"/>
   </Tiles>
   <Tiles xsi:type="angularbotUi:TileCrud" Uuid="bd35c152-5b43-46d9-b7e0-a3928f1ecd2f" Name="Tank">
     <Entity href="../entity/firstapp.springbotentity#dfb49f05-0e0a-427e-86c8-c67bc655c6c6"/>
   </Tiles>
-  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="46760236-4bb1-4886-8976-b60ec2e0ac15" Name="Species Wrapping Tile" IsDefaultTile="true">
-    <ViewElements xsi:type="angularbotUi:View" Uuid="53fbccf8-833e-48a1-fa1f-75cca6d68771" Name="Species Wrapping View" DefaultView="true"/>
+  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="9da9f3c5-9b46-47ef-f9fd-2c4c4418ef56" Name="Species Wrapping Tile" IsDefaultTile="true">
+    <ViewElements xsi:type="angularbotUi:View" Uuid="049bd931-24ce-4574-c9f3-cdbd13739556" Name="Species Wrapping View" DefaultView="true"/>
   </Tiles>
   <Tiles xsi:type="angularbotUi:TileCrud" Uuid="d550dc67-ff6d-43d4-a61d-d5aacd432783" Name="Species">
     <Entity href="../entity/firstapp.springbotentity#698fd4c0-c323-4f4e-b225-0129d5d840dc"/>
   </Tiles>
-  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="4062584d-8073-401d-fbe6-fbb542d12fbc" Name="Fish Wrapping Tile" IsDefaultTile="true">
-    <ViewElements xsi:type="angularbotUi:View" Uuid="5f2b8926-b6e3-4f17-9812-c6dde573d2ca" Name="Fish Wrapping View" DefaultView="true"/>
+  <Tiles xsi:type="angularbotUi:TileCustom" Uuid="e8dc7a20-e8e8-4fed-e21c-f81ace781ec0" Name="Fish Wrapping Tile" IsDefaultTile="true">
+    <ViewElements xsi:type="angularbotUi:View" Uuid="ad69a986-fe21-4337-844b-4b5e4e23d0f6" Name="Fish Wrapping View" DefaultView="true"/>
   </Tiles>
   <Tiles xsi:type="angularbotUi:TileCrud" Uuid="a9e7dc4e-e3c0-449a-a11d-2f0edf1666a0" Name="Fish">
     <Entity href="../entity/firstapp.springbotentity#356ebb0d-1e65-4d3b-849a-d8bddd605974"/>
   </Tiles>
-  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="f56c76a4-7b6b-4542-a98b-56d5def36cc0" DisplayIndex="1" Source="2343c213-27a4-430f-d664-304da0cc1d51" Target="ded3844c-3fc5-47a1-a4a6-e38623351906"/>
-  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="44468bf2-a305-4042-8573-d185ebc8d8b2" DisplayIndex="1" Source="e60d0b53-7a99-4c6f-f756-6da43f368100" Target="079749e4-b590-46f4-adab-4c2c587a3b98"/>
-  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="85e5a313-19b2-46df-a98b-d6a697a70d61" DisplayIndex="1" Source="768c737e-3950-4071-d086-9d78cd9a7bf2" Target="39bdd4f5-aca8-4f1e-b406-095fdd1c7124"/>
-  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="f9a51c55-4971-4a8c-a9de-65dec72e7d44" DisplayIndex="1" Source="aaf63f6d-f16a-4afe-cdc9-8609885a9748" Target="bd35c152-5b43-46d9-b7e0-a3928f1ecd2f"/>
-  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="63633187-0cae-4021-844f-f206a2b80e1a" DisplayIndex="1" Source="53fbccf8-833e-48a1-fa1f-75cca6d68771" Target="d550dc67-ff6d-43d4-a61d-d5aacd432783"/>
-  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="2ef4bc58-b6ce-46df-bb17-8b8d57190fef" DisplayIndex="1" Source="5f2b8926-b6e3-4f17-9812-c6dde573d2ca" Target="a9e7dc4e-e3c0-449a-a11d-2f0edf1666a0"/>
-  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="df353aeb-e0d0-439c-8422-8272c4ed80da" Source="8cce540d-1169-4e80-82e9-8640d243d57d" Target="d04949de-b044-4019-fd7b-d9b6874e1ebd"/>
-  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="6fff4e2b-50f1-48a3-99a8-d048c6aa92d5" Source="ac5dad51-da0f-402e-8029-ee7bb6798a80" Target="e6266b1b-a3e6-4924-b516-dedb1f5c595f"/>
-  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="8af0d84b-a5aa-461a-b3ba-ac357d5570bd" Source="8c79164c-cd86-43bf-9591-490e2a301411" Target="6523f698-cdb2-4572-cb46-7f6195bf4446"/>
-  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="63b907d0-7e0a-46c3-8afd-f9e9ea94dc49" Source="bcc5ad80-a827-457d-ae48-f017830928a9" Target="b10ad8aa-9ff0-43da-9e6c-e8c2ab4d5239"/>
-  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="fe8453c1-6682-48be-9050-f17ab2b593f5" Source="9f397c91-73a7-4719-957e-ae09e8780586" Target="46760236-4bb1-4886-8976-b60ec2e0ac15"/>
-  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="3ec867d2-69bc-48eb-ae0f-94c16b668f4f" Source="c6be7aaa-0e38-4384-bece-e3e3a172e8bc" Target="4062584d-8073-401d-fbe6-fbb542d12fbc"/>
+  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="1bfe26ad-240c-4213-a802-8ebb1eb8e76c" DisplayIndex="1" Source="de5bc190-ec2b-4c6c-9783-8432ef6bba42" Target="ded3844c-3fc5-47a1-a4a6-e38623351906"/>
+  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="0f7456be-b97a-4642-8cee-7bbaf8123356" DisplayIndex="1" Source="e2224e08-6aff-4fbc-c807-7652bd35ea6d" Target="079749e4-b590-46f4-adab-4c2c587a3b98"/>
+  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="4e115270-6131-4b43-ac19-88e92a06561b" DisplayIndex="1" Source="1988275d-ffff-4fdc-ff2b-63dcea1a0a5f" Target="39bdd4f5-aca8-4f1e-b406-095fdd1c7124"/>
+  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="26d23605-1e61-4c7f-8f9b-b7b770005580" DisplayIndex="1" Source="8a47f2a5-60a3-42bf-beb6-1115d7e1d346" Target="bd35c152-5b43-46d9-b7e0-a3928f1ecd2f"/>
+  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="ae4ce53a-2600-4380-b052-6db2381b8de6" DisplayIndex="1" Source="049bd931-24ce-4574-c9f3-cdbd13739556" Target="d550dc67-ff6d-43d4-a61d-d5aacd432783"/>
+  <ReferenceViewViewElements xsi:type="angularbotUi:ReferenceViewTile" Uuid="5bbc1b7f-ab06-458a-bd34-92f60f721280" DisplayIndex="1" Source="ad69a986-fe21-4337-844b-4b5e4e23d0f6" Target="a9e7dc4e-e3c0-449a-a11d-2f0edf1666a0"/>
+  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="92b72ca0-b6be-40ab-9254-427f0e83ce76" Source="8cce540d-1169-4e80-82e9-8640d243d57d" Target="7c6b4f6e-2afc-4a69-af7a-9c75d705384c"/>
+  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="841acc62-dabf-4453-9fec-e17ea264936b" Source="ac5dad51-da0f-402e-8029-ee7bb6798a80" Target="30ab1bb7-2ba7-4669-b7bf-92e430c8df3c"/>
+  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="d07dde9b-276b-4071-b06c-01b91000a3d2" Source="8c79164c-cd86-43bf-9591-490e2a301411" Target="918eca70-2bc6-4753-80af-0b224982b5c1"/>
+  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="969b6035-f862-43a8-af1f-a47208b12ab4" Source="bcc5ad80-a827-457d-ae48-f017830928a9" Target="1c6dc477-3821-48dc-c743-2e738ceae71d"/>
+  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="c508ff5b-8962-48bb-bbd6-e7742a7cc6c6" Source="9f397c91-73a7-4719-957e-ae09e8780586" Target="9da9f3c5-9b46-47ef-f9fd-2c4c4418ef56"/>
+  <ReferencePageTiles xsi:type="angularbotUi:ReferencePageTile" Uuid="53815088-d0ce-449f-942d-63c58546c5e8" Source="c6be7aaa-0e38-4384-bece-e3e3a172e8bc" Target="e8dc7a20-e8e8-4fed-e21c-f81ace781ec0"/>
 </angularbotUi:UserInterfaceModel>
