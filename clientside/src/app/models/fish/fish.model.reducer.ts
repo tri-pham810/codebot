@@ -47,8 +47,7 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
 
     switch (action.type) {
       case modelAction.FishModelActionTypes.CREATE_FISH_OK:
-        const createdModel = (action as modelAction.CreateFishModelOK).stateConfig
-          .targetModel;
+        const createdModel = (action as modelAction.CreateFishModelOK).stateConfig.targetModel;
 
         // % protected region % [Add any additional CreateModelOK logic before main logic here] off begin
         // % protected region % [Add any additional CreateModelOK logic before main logic here] end
@@ -69,10 +68,8 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
         // TODO: Add handling of failure
         break;
       case modelAction.FishModelActionTypes.CREATE_ALL_FISH_OK:
-        const createdModels = (action as modelAction.CreateAllFishModelOK).stateConfig
-          .targetModels;
-        const collectionIdAfterCreateAll = (action as modelAction.CreateAllFishModelOK)
-          .stateConfig.collectionId;
+        const createdModels = (action as modelAction.CreateAllFishModelOK).stateConfig.targetModels;
+        const collectionIdAfterCreateAll = (action as modelAction.CreateAllFishModelOK).stateConfig.collectionId;
 
         // % protected region % [Add any additional CreateModelOK logic before main logic here] off begin
         // % protected region % [Add any additional CreateModelOK logic before main logic here] end
@@ -103,10 +100,8 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
         // TODO: Add handling of failure
         break;
       case modelAction.FishModelActionTypes.DELETE_FISH_OK:
-        const deletedModelId = (action as modelAction.DeleteFishModelOK).stateConfig
-          .targetModelId;
-        const collectionIdAfterDelete = (action as modelAction.UpdateFishModelOK)
-          .stateConfig.collectionId;
+        const deletedModelId = (action as modelAction.DeleteFishModelOK).stateConfig.targetModelId;
+        const collectionIdAfterDelete = (action as modelAction.UpdateFishModelOK).stateConfig.collectionId;
 
         // % protected region % [Add any additional DeleteModelOK logic before main logic here] off begin
         // % protected region % [Add any additional DeleteModelOK logic before main logic here] end
@@ -125,10 +120,8 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
 
         break;
       case modelAction.FishModelActionTypes.DELETE_ALL_FISH_OK:
-        const deletedModelIds = (action as modelAction.DeleteFishModelOK).stateConfig
-          .targetModelIds;
-        const collectionIdAfterDeleteAll = (action as modelAction.UpdateFishModelOK)
-          .stateConfig.collectionId;
+        const deletedModelIds = (action as modelAction.DeleteFishModelOK).stateConfig.targetModelIds;
+        const collectionIdAfterDeleteAll = (action as modelAction.UpdateFishModelOK).stateConfig.collectionId;
 
         // % protected region % [Add any additional DeleteModelAllOK logic before main logic here] off begin
         // % protected region % [Add any additional DeleteModelAllOK logic before main logic here] end
@@ -148,8 +141,7 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
         // TODO: Add handling of failure
         break;
       case modelAction.FishModelActionTypes.UPDATE_FISH_OK:
-        const updatedModel = (action as modelAction.UpdateFishModelOK).stateConfig
-          .targetModel;
+        const updatedModel = (action as modelAction.UpdateFishModelOK).stateConfig.targetModel;
 
         // % protected region % [Add any additional UpdateModelOK logic before main logic here] off begin
         // % protected region % [Add any additional UpdateModelOK logic before main logic here] end
@@ -171,10 +163,8 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
         break;
 
       case modelAction.FishModelActionTypes.UPDATE_ALL_FISH_OK:
-        const updatedModels = (action as modelAction.UpdateAllFishModelOK).stateConfig
-          .targetModels;
-        const collectionIdAfterUpdateAll = (action as modelAction.UpdateAllFishModelOK)
-          .stateConfig.collectionId;
+        const updatedModels = (action as modelAction.UpdateAllFishModelOK).stateConfig.targetModels;
+        const collectionIdAfterUpdateAll = (action as modelAction.UpdateAllFishModelOK).stateConfig.collectionId;
 
         // % protected region % [Add any additional UpdateModelOK logic before main logic here] off begin
         // % protected region % [Add any additional UpdateModelOK logic before main logic here] end
@@ -205,8 +195,7 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
         // TODO: Add handling of failure
         break;
       case modelAction.FishModelActionTypes.FETCH_FISH_OK:
-        let fetchedModel = (action as modelAction.FetchFishModelOK).stateConfig
-          .targetModel;
+        let fetchedModel = (action as modelAction.FetchFishModelOK).stateConfig.targetModel;
 
         // % protected region % [Add any additional FetchModelOK logic before main logic here] off begin
         // % protected region % [Add any additional FetchModelOK logic before main logic here] end
@@ -224,21 +213,15 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
 
         break;
       case modelAction.FishModelActionTypes.FETCH_ALL_FISH_OK:
-        const totalCountAfterFetchAll = (action as modelAction.FetchAllFishModelsOK)
-          .stateConfig.collectionCount;
-        const fetchedModelsAfterFetchAll = (action as modelAction.FetchAllFishModelsOK)
-          .stateConfig.targetModels;
-        const collectionIdAfterFetchAll = (action as modelAction.FetchAllFishModelsOK)
-          .stateConfig.collectionId;
-        const queryParamsAfterFetchAll = (action as modelAction.FetchAllFishModelsOK)
-          .stateConfig.queryParams;
+        const totalCountAfterFetchAll = (action as modelAction.FetchAllFishModelsOK).stateConfig.collectionCount;
+        const fetchedModelsAfterFetchAll = (action as modelAction.FetchAllFishModelsOK).stateConfig.targetModels;
+        const collectionIdAfterFetchAll = (action as modelAction.FetchAllFishModelsOK).stateConfig.collectionId;
+        const queryParamsAfterFetchAll = (action as modelAction.FetchAllFishModelsOK).stateConfig.queryParams;
 
         // % protected region % [Add any additional FetchAllModelsOK logic before main logic here] off begin
         // % protected region % [Add any additional FetchAllModelsOK logic before main logic here] end
 
-        _.flatten(
-          fetchedModelsAfterFetchAll.map((model) => FishModel.deepParse(model))
-        ).forEach((model) => {
+        _.flatten(fetchedModelsAfterFetchAll.map((model) => FishModel.deepParse(model))).forEach((model) => {
           draft[model.className].data[model.id] = _.assignWith(
             draft[model.className].data[model.id],
             model,
@@ -251,15 +234,9 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
         // But they might not have matched component
         if (collectionIdAfterFetchAll) {
           // When select all, try to fetch all the data from the store
-          draft[className].collectionState[collectionIdAfterFetchAll].ids = Object.keys(
-            draft[className].data
-          );
-          draft[className].collectionState[
-            collectionIdAfterFetchAll
-          ].queryParams = queryParamsAfterFetchAll;
-          draft[className].collectionState[
-            collectionIdAfterFetchAll
-          ].collectionCount = totalCountAfterFetchAll;
+          draft[className].collectionState[collectionIdAfterFetchAll].ids = Object.keys(draft[className].data);
+          draft[className].collectionState[collectionIdAfterFetchAll].queryParams = queryParamsAfterFetchAll;
+          draft[className].collectionState[collectionIdAfterFetchAll].collectionCount = totalCountAfterFetchAll;
         }
 
         // % protected region % [Add any additional logic before ending FetchAllModelsOK action here] off begin
@@ -279,8 +256,7 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
 
         break;
       case modelAction.FishModelActionTypes.FETCH_FISH_AUDITS_BY_ENTITY_ID_OK:
-        const auditsByEntityId = (action as modelAction.FetchFishModelAuditsByEntityIdOK)
-          .audits;
+        const auditsByEntityId = (action as modelAction.FetchFishModelAuditsByEntityIdOK).audits;
 
         // % protected region % [Add any additional FetchModelAuditsByEntityIdOK logic before main logic here] off begin
         // % protected region % [Add any additional FetchModelAuditsByEntityIdOK logic before main logic here] end
@@ -292,21 +268,15 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
 
         break;
       case modelAction.FishModelActionTypes.FETCH_FISH_WITH_QUERY_OK:
-        const totalCountAfterFetchWithQuery = (action as modelAction.FetchFishModelsWithQueryOK)
-          .stateConfig.collectionCount;
-        const fetchedModelsAfterFetchWithQuery = (action as modelAction.FetchFishModelsWithQueryOK)
-          .stateConfig.targetModels;
-        const collectionIdAfterFetchWithQuery = (action as modelAction.FetchFishModelsWithQueryOK)
-          .stateConfig.collectionId;
-        const queryParamsAfterFetchWithQuery = (action as modelAction.FetchFishModelsWithQueryOK)
-          .stateConfig.queryParams;
+        const totalCountAfterFetchWithQuery = (action as modelAction.FetchFishModelsWithQueryOK).stateConfig.collectionCount;
+        const fetchedModelsAfterFetchWithQuery = (action as modelAction.FetchFishModelsWithQueryOK).stateConfig.targetModels;
+        const collectionIdAfterFetchWithQuery = (action as modelAction.FetchFishModelsWithQueryOK).stateConfig.collectionId;
+        const queryParamsAfterFetchWithQuery = (action as modelAction.FetchFishModelsWithQueryOK).stateConfig.queryParams;
 
         // % protected region % [Add any additional FetchModelsWithQueryOK logic before main logic here] off begin
         // % protected region % [Add any additional FetchModelsWithQueryOK logic before main logic here] end
 
-        _.flatten(
-          fetchedModelsAfterFetchWithQuery.map((model) => FishModel.deepParse(model))
-        ).forEach((model) => {
+        _.flatten(fetchedModelsAfterFetchWithQuery.map((model) => FishModel.deepParse(model))).forEach((model) => {
           draft[model.className].data[model.id] = _.assignWith(
             draft[model.className].data[model.id],
             model,
@@ -315,15 +285,11 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
         });
 
         if (collectionIdAfterFetchWithQuery) {
-          draft[className].collectionState[
-            collectionIdAfterFetchWithQuery
-          ].ids = fetchedModelsAfterFetchWithQuery.map((model) => model.id);
-          draft[className].collectionState[
-            collectionIdAfterFetchWithQuery
-          ].queryParams = queryParamsAfterFetchWithQuery;
-          draft[className].collectionState[
-            collectionIdAfterFetchWithQuery
-          ].collectionCount = totalCountAfterFetchWithQuery;
+          draft[className].collectionState[collectionIdAfterFetchWithQuery].ids = fetchedModelsAfterFetchWithQuery.map(
+            (model) => model.id
+          );
+          draft[className].collectionState[collectionIdAfterFetchWithQuery].queryParams = queryParamsAfterFetchWithQuery;
+          draft[className].collectionState[collectionIdAfterFetchWithQuery].collectionCount = totalCountAfterFetchWithQuery;
         }
 
         // % protected region % [Add any additional FetchModelsWithQueryOK logic after main logic here] off begin
@@ -331,21 +297,18 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
 
         break;
       case modelAction.FishModelActionTypes.FETCH_LAST_FISH_WITH_QUERY_OK:
-        const totalCountAfterFetchLastWithQuery = (action as modelAction.FetchLastFishModelsWithQueryOK)
-          .stateConfig.collectionCount;
-        const fetchedModelsAfterFetchLastWithQuery = (action as modelAction.FetchLastFishModelsWithQueryOK)
-          .stateConfig.targetModels;
-        const collectionIdAfterFetchLastWithQuery = (action as modelAction.FetchLastFishModelsWithQueryOK)
-          .stateConfig.collectionId;
-        const queryParamsAfterFetchLastWithQuery = (action as modelAction.FetchLastFishModelsWithQueryOK)
-          .stateConfig.queryParams;
+        const totalCountAfterFetchLastWithQuery = (action as modelAction.FetchLastFishModelsWithQueryOK).stateConfig
+          .collectionCount;
+        const fetchedModelsAfterFetchLastWithQuery = (action as modelAction.FetchLastFishModelsWithQueryOK).stateConfig
+          .targetModels;
+        const collectionIdAfterFetchLastWithQuery = (action as modelAction.FetchLastFishModelsWithQueryOK).stateConfig
+          .collectionId;
+        const queryParamsAfterFetchLastWithQuery = (action as modelAction.FetchLastFishModelsWithQueryOK).stateConfig.queryParams;
 
         // % protected region % [Add any additional FetchLastModelsWithQueryOK logic before main logic here] off begin
         // % protected region % [Add any additional FetchLastModelsWithQueryOK logic before main logic here] end
 
-        _.flatten(
-          fetchedModelsAfterFetchLastWithQuery.map((model) => FishModel.deepParse(model))
-        ).forEach((model) => {
+        _.flatten(fetchedModelsAfterFetchLastWithQuery.map((model) => FishModel.deepParse(model))).forEach((model) => {
           draft[model.className].data[model.id] = _.assignWith(
             draft[model.className].data[model.id],
             model,
@@ -353,23 +316,18 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
           );
         });
 
-        draft[className].collectionState[
-          collectionIdAfterFetchLastWithQuery
-        ].ids = fetchedModelsAfterFetchLastWithQuery.map((model) => model.id);
-        draft[className].collectionState[
-          collectionIdAfterFetchLastWithQuery
-        ].queryParams = queryParamsAfterFetchLastWithQuery;
-        draft[className].collectionState[
-          collectionIdAfterFetchLastWithQuery
-        ].collectionCount = totalCountAfterFetchLastWithQuery;
+        draft[className].collectionState[collectionIdAfterFetchLastWithQuery].ids = fetchedModelsAfterFetchLastWithQuery.map(
+          (model) => model.id
+        );
+        draft[className].collectionState[collectionIdAfterFetchLastWithQuery].queryParams = queryParamsAfterFetchLastWithQuery;
+        draft[className].collectionState[collectionIdAfterFetchLastWithQuery].collectionCount = totalCountAfterFetchLastWithQuery;
 
         // % protected region % [Add any additional FetchModelsWithQueryOK logic after main logic here] off begin
         // % protected region % [Add any additional FetchModelsWithQueryOK logic after main logic here] end
 
         break;
       case modelAction.FishModelActionTypes.COUNT_FISHS_OK:
-        const totalCountAfterCount = (action as modelAction.CountFishModelsOK).stateConfig
-          .totalCount;
+        const totalCountAfterCount = (action as modelAction.CountFishModelsOK).stateConfig.totalCount;
 
         // % protected region % [Add any additional CountModelsOK logic before main logic here] off begin
         // % protected region % [Add any additional CountModelsOK logic before main logic here] end
@@ -381,10 +339,8 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
 
         break;
       case modelAction.FishModelActionTypes.INITIALISE_FISH_COLLECTION_STATE:
-        const collectionIdToInitialise = (action as modelAction.InitialiseFishCollectionState)
-          .stateConfig.collectionId;
-        const queryParamsToInitialise = (action as modelAction.InitialiseFishCollectionState)
-          .stateConfig.queryParams;
+        const collectionIdToInitialise = (action as modelAction.InitialiseFishCollectionState).stateConfig.collectionId;
+        const queryParamsToInitialise = (action as modelAction.InitialiseFishCollectionState).stateConfig.queryParams;
 
         // % protected region % [Add any additional InitialiseCollection logic before main logic here] off begin
         // % protected region % [Add any additional InitialiseCollection logic before main logic here] end
@@ -395,56 +351,35 @@ export function modelReducer(currentState: ModelState, action: Action): ModelSta
           };
         }
 
-        draft[className].collectionState[
-          collectionIdToInitialise
-        ].queryParams = queryParamsToInitialise;
+        draft[className].collectionState[collectionIdToInitialise].queryParams = queryParamsToInitialise;
 
-        // % protected region % [Add any additional InitializeCollection logic after main logic here] on begin
-        break;
-      case modelAction.FishModelActionTypes.FETCH_ALIVE_PURCHASED_FISH_OK:
-        const totalCountAlivePurchasedAfterFetchWithQuery = (action as modelAction.FetchAlivePurchasedFishOk)
-          .stateConfig.collectionCount;
-        const fetchedModelsAlivePurchasedAfterFetchWithQuery = (action as modelAction.FetchAlivePurchasedFishOk)
-          .stateConfig.targetModels;
-        const collectionIdAlivePurchasedAfterFetchWithQuery = (action as modelAction.FetchAlivePurchasedFishOk)
-          .stateConfig.collectionId;
-        const queryParamsAlivePurchasedAfterFetchWithQuery = (action as modelAction.FetchAlivePurchasedFishOk)
-          .stateConfig.queryParams;
-
-        _.flatten(
-          fetchedModelsAlivePurchasedAfterFetchWithQuery.map((model) =>
-            FishModel.deepParse(model)
-          )
-        ).forEach((model) => {
-          draft[model.className].data[model.id] = _.assignWith(
-            draft[model.className].data[model.id],
-            model,
-            (objValue, srcValue) => (_.isUndefined(srcValue) ? objValue : srcValue)
-          );
-        });
-        if (collectionIdAlivePurchasedAfterFetchWithQuery) {
-          draft[className].collectionState[
-            collectionIdAlivePurchasedAfterFetchWithQuery
-          ].ids = fetchedModelsAlivePurchasedAfterFetchWithQuery.map((model) => model.id);
-          draft[className].collectionState[
-            collectionIdAlivePurchasedAfterFetchWithQuery
-          ].queryParams = queryParamsAlivePurchasedAfterFetchWithQuery;
-          draft[className].collectionState[
-            collectionIdAlivePurchasedAfterFetchWithQuery
-          ].collectionCount = totalCountAlivePurchasedAfterFetchWithQuery;
-        }
-
-        break;
-
-      case modelAction.FishModelActionTypes.FETCH_LAST_FISH_WITH_QUERY_FAIL:
-        console.error('Fetch failed');
-
+        // % protected region % [Add any additional InitializeCollection logic after main logic here] off begin
         // % protected region % [Add any additional InitializeCollection logic after main logic here] end
 
         break;
     }
 
-    // % protected region % [Add any additional logic before ending the drafting stage here] off begin
+    // % protected region % [Add any additional logic before ending the drafting stage here] on begin
+    switch (action.type) {
+      case modelAction.FishModelActionTypes.FETCH_ALIVE_PURCHASED_FISH_OK:
+        const totalCountAfterFetchLastWithQuery = (action as modelAction.FetchAlivePurchasedFishOk).stateConfig.collectionCount;
+        const fetchedModelsAfterFetchLastWithQuery = (action as modelAction.FetchAlivePurchasedFishOk).stateConfig.targetModels;
+        const collectionIdAfterFetchLastWithQuery = (action as modelAction.FetchAlivePurchasedFishOk).stateConfig.collectionId;
+        console.error(collectionIdAfterFetchLastWithQuery + '+' + totalCountAfterFetchLastWithQuery);
+
+        const queryParamsAfterFetchLastWithQuery = (action as modelAction.FetchAlivePurchasedFishOk).stateConfig.queryParams;
+
+        // % protected region % [Add any additional FetchLastModelsWithQueryOK logic before main logic here] off begin
+        // % protected region % [Add any additional FetchLastModelsWithQueryOK logic before main logic here] end
+
+        draft[className].collectionState[collectionIdAfterFetchLastWithQuery].queryParams = queryParamsAfterFetchLastWithQuery;
+        draft[className].collectionState[collectionIdAfterFetchLastWithQuery].collectionCount = totalCountAfterFetchLastWithQuery;
+
+        break;
+      case modelAction.FishModelActionTypes.FETCH_ALIVE_PURCHASED_FISH_FAIL:
+        console.error('Fetch failed');
+        break;
+    }
     // % protected region % [Add any additional logic before ending the drafting stage here] end
   });
 }

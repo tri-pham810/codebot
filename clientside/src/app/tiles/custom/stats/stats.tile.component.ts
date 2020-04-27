@@ -21,10 +21,7 @@ import { Component } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 import { Chart } from 'chart.js';
 import { Store } from '@ngrx/store';
-import {
-  getFishCollectionModels,
-  getFishCollectionState,
-} from '../../../models/fish/fish.model.selector';
+import { getFishCollectionModels, getFishCollectionState } from '../../../models/fish/fish.model.selector';
 import { Observable } from 'rxjs';
 import { FishModel } from '../../../models/fish/fish.model';
 import * as modelAction from '../../../models/fish/fish.model.action';
@@ -52,10 +49,7 @@ export class StatsTileComponent {
   alivePurchasedFishesCount: number = 0;
   alivePurchaseFishesId = 'alivePurchases-fish';
 
-  constructor(
-    private readonly store: Store<{ model: FishModelState }>,
-    private readonly fishService: FishService
-  ) {
+  constructor(private readonly store: Store<{ model: FishModelState }>, private readonly fishService: FishService) {
     this.store.dispatch(
       new modelAction.InitialiseFishCollectionState({
         collectionId: this.aliveFishesId,
@@ -83,12 +77,11 @@ export class StatsTileComponent {
       })
     );
 
-    this.store
-      .select(getFishCollectionState, this.aliveFishesId)
-      .subscribe((collectionStatus) => {
-        this.aliveFishesCount = collectionStatus.collectionCount;
-        this.updateChart();
-      });
+    this.store.select(getFishCollectionState, this.aliveFishesId).subscribe((collectionStatus) => {
+      debugger;
+      this.aliveFishesCount = collectionStatus.collectionCount;
+      this.updateChart();
+    });
 
     // Get Dead Fish
     this.store.dispatch(
@@ -118,12 +111,10 @@ export class StatsTileComponent {
       })
     );
 
-    this.store
-      .select(getFishCollectionState, this.deadFishesId)
-      .subscribe((collectionStatus) => {
-        this.deadFishesCount = collectionStatus.collectionCount;
-        this.updateChart();
-      });
+    this.store.select(getFishCollectionState, this.deadFishesId).subscribe((collectionStatus) => {
+      this.deadFishesCount = collectionStatus.collectionCount;
+      this.updateChart();
+    });
 
     // this.fishService.getFishByAliveAndPurchased().subscribe((config) => {
     //   this.alivePurchasedFishesCount = config.collectionCount;
@@ -136,27 +127,28 @@ export class StatsTileComponent {
       })
     );
 
-    this.store
-      .select(getFishCollectionState, this.alivePurchaseFishesId)
-      .subscribe((collectionStatus) => {
-        this.alivePurchasedFishesCount = collectionStatus.collectionCount;
-        this.updateChart();
-      });
+    this.store.select(getFishCollectionState, this.alivePurchaseFishesId).subscribe((collectionStatus) => {
+      this.alivePurchasedFishesCount = collectionStatus.collectionCount;
+      console.error(this.alivePurchasedFishesCount);
+      this.updateChart();
+    });
 
     this.store.dispatch(
       new modelAction.FetchAlivePurchasedFish({
         collectionId: this.alivePurchaseFishesId,
       })
     );
+
+    // this.store.dispatch(
+    //   new modelAction.FetchAlivePurchasedFish({
+    //     collectionId: this.alivePurchaseFishesId,
+    //   })
+    // );
   }
 
   updateChart() {
     if (this.chart) {
-      this.chart.data.datasets[0].data = [
-        this.aliveFishesCount,
-        this.deadFishesCount,
-        this.alivePurchasedFishesCount,
-      ];
+      this.chart.data.datasets[0].data = [this.aliveFishesCount, this.deadFishesCount, this.alivePurchasedFishesCount];
       this.chart.update();
     }
   }
@@ -181,11 +173,7 @@ export class StatsTileComponent {
             label: 'Fish count',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [
-              this.aliveFishesCount,
-              this.deadFishesCount,
-              this.alivePurchasedFishesCount,
-            ],
+            data: [this.aliveFishesCount, this.deadFishesCount, this.alivePurchasedFishesCount],
           },
         ],
       },
